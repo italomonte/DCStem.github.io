@@ -32,7 +32,7 @@
             class="carousel-item active h-100"
             style="
               margin: 0px;
-              background: url('assets/img/businesspeople-working-finance-accounting-analyze-financial-graph-budget-planning-future-office-room%20(1)%201.png')
+              background: url({% static 'data_academy/img/businesspeople-working-finance-1.jpg' %})
                 center / cover no-repeat;
             "
           >
@@ -75,7 +75,7 @@
           <div
             class="carousel-item h-100"
             style="
-              background: url('assets/img/businesspeople-working-finance-accounting-analyze-financi.jpg');
+              background: url('{% static 'data_academy/img/businesspeople-working-finance-2.jpg' %}');
               background-size: cover;
             "
           >
@@ -108,7 +108,8 @@
           <div class="carousel-item h-100">
             <img
               class="w-100 d-block position-absolute h-100 fit-cover"
-              src="assets/img/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg"
+              src="{% static 'data_academy/img/businesswoman-using-tablet.jpg' %}"
+              
               alt="Slide Image"
               style="z-index: -1"
             />
@@ -207,11 +208,11 @@
         style="
           width: 100%;
           height: 450px;
-          background: url('assets/img/Mask%20group(1).png');
+          background: url('{% static 'data_academy/img/Mask%20group(1).png' %}');
           margin-top: 50px;
           background-size: auto;
         "
-        src="assets/img/Mask%20group(1).png"
+        src="{% static 'data_academy/img/Mask%20group(1).png' %}"
       />
     </section>
     <section class="showcase">
@@ -236,7 +237,7 @@
                     <div class="mx-auto testimonial-item mb-5 mb-lg-0">
                       <img
                         class="rounded-circle img-fluid mb-3"
-                        src="assets/img/facil_aprendizagem.png"
+                        src="{% static 'data_academy/img/facil_aprendizagem.png' %}"
                         width="129"
                         height="86"
                         style="width: 150px; height: 150px; box-shadow: 0px 0px"
@@ -263,7 +264,7 @@
                     <div class="mx-auto testimonial-item mb-5 mb-lg-0">
                       <img
                         class="rounded-circle img-fluid mb-3"
-                        src="assets/img/conteudo_confiavel.png"
+                        src="{% static 'data_academy/img/conteudo_confiavel.png' %}"
                         width="100"
                         height="100"
                         style="width: 150px; height: 150px; box-shadow: 0px 0px"
@@ -282,7 +283,7 @@
                     <div class="mx-auto testimonial-item mb-5 mb-lg-0">
                       <img
                         class="rounded-circle img-fluid mb-3"
-                        src="assets/img/integracao_sala_de_aula.png"
+                        src="{% static 'data_academy/img/integracao_sala_de_aula.png' %}"
                         width="141"
                         height="94"
                         style="width: 150px; height: 150px; box-shadow: 0px 0px"
@@ -323,7 +324,7 @@
             <div class="mx-auto testimonial-item mb-5 mb-lg-0">
               <img
                 class="img-fluid mb-3"
-                src="assets/img/engenharia_computacao.png"
+                src="{% static 'data_academy/img/engenharia_computacao.png' %}"
                 width="129"
                 height="86"
                 style="
@@ -340,7 +341,7 @@
             <div class="mx-auto testimonial-item mb-5 mb-lg-0">
               <img
                 class="img-fluid mb-3"
-                src="assets/img/engenharia_eletronica.png"
+                src="{% static 'data_academy/img/engenharia_eletronica.png' %}"
                 width="139"
                 height="93"
                 style="width: 92px; height: 95px; box-shadow: 0px 0px"
@@ -352,7 +353,7 @@
             <div class="mx-auto testimonial-item mb-5 mb-lg-0">
               <img
                 class="img-fluid mb-3"
-                src="assets/img/engenharia_controle_automacao.png"
+                src="{% static 'data_academy/img/engenharia_controle_automacao.png' %}"
                 width="141"
                 height="94"
                 style="width: 96px; height: 96px; box-shadow: 0px 0px"
@@ -369,7 +370,7 @@
             <div class="mx-auto testimonial-item mb-5 mb-lg-0">
               <img
                 class="img-fluid mb-3"
-                src="assets/img/sistemas_de_informação.png"
+                src="{% static 'data_academy/img/sistemas_de_informação.png' %}"
                 width="146"
                 height="97"
                 style="height: 97px; box-shadow: 0px 0px; width: 60px"
@@ -381,7 +382,7 @@
             <div class="mx-auto testimonial-item mb-5 mb-lg-0">
               <img
                 class="img-fluid mb-3"
-                src="assets/img/engenharia_software.png"
+                src="{% static 'data_academy/img/engenharia_software.png' %}"
                 width="154"
                 height="103"
                 style="width: 105px; height: 96px; box-shadow: 0px 0px"
@@ -505,6 +506,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static 'data_academy/js/bootstrap.min.js' %}"></script>
   </body>
 </html>
