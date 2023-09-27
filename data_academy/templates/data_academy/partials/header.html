@@ -11,7 +11,7 @@
         class="navbar navbar-light navbar-expand-md fixed-top bg-opacity-75 bg-light shadow py-3"
     >
         <div class="container ola">
-          <a class="ola navbar-brand d-flex align-items-center" href=""
+          <a class="ola navbar-brand d-flex align-items-center" href="{% url "data_academy:home" %}"
             ><span
               style="
                 --bs-primary: #023047;
@@ -20,14 +20,15 @@
                 font-weight: bold;
               "
               >Data Academy</span
-            ></a
-          ><button
+            >
+          </a>
+          <button
             data-bs-toggle="collapse"
             class="navbar-toggler"
             data-bs-target="#navcol-2"
           >
-            <span class="visually-hidden">Toggle navigation</span
-            ><span class="navbar-toggler-icon"></span>
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navcol-2">
             <input
@@ -41,35 +42,34 @@
             />
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="">Início</a>
+                <a class="nav-link active" href="{% url "data_academy:home" %}">Início</a>
               </li>
               <li class="nav-item dropdown">
-                <a
+                  <a
                   class="dropdown-toggle nav-link"
                   aria-expanded="false"
                   data-bs-toggle="dropdown"
                   data-bs-auto-close="outside"
-                  href="#"  
                   >Conteúdos</a
                 >
                 <div class="dropdown-menu" style="border-radius: 0px">
                   <a
                     class="dropdown-item"
-                    href="estatistica"
+                    href="{% url "data_academy:estatistica" %}"
                     style="--bs-body-color: #969696"
                     >Estatística no Python</a
-                  ><a class="dropdown-item" href="abp"
+                  ><a class="dropdown-item" href="{% url "data_academy:abp" %}"
                     >Aprendizagem Baseada em Problemas</a
-                  ><a class="dropdown-item" href="problema"
+                  ><a class="dropdown-item" href="{% url "data_academy:problema" %}"
                     >Problema (ABP)</a
                   >
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./login">Entrar</a>
+                <a class="nav-link active" href="{% url "data_academy:login" %}">Entrar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Cadastrar-se</a>
+                <a class="nav-link active" href="{% url "data_academy:login" %}">Cadastrar-se</a>
               </li>
             </ul>
           </div>
