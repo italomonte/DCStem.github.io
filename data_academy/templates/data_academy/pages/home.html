@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Academy | Alterar</title>
-
-  <!--css-->
-  <link rel="stylesheet" href="static/data_academy/css/styles.css">
-
-</head>
+{% include "../partials/head.html" %}
 
 <body>
-  <header>
-    <div class="header-content">
-      <div class="container menu-content">
-        <nav>
-          <a class="logo" href="">Data <br> Academy</a>
-        </nav>
 
-        <nav>
-          <ul class="menu-item">
-            <li><a href="">Início</a></li>
-            <li><a href="">Conteúdos</a></li>
-            <li><a href="">Login</a></li>
-          </ul>
-
-        </nav>
-      </div>
-    </div>
-  </header>
+  {% include "../partials/header.html" %}
 
   <section class="section">
     <div class="container main-content">
@@ -164,19 +140,8 @@
   </section>
 
 
-  <section class="section dark-blue-bg">
-    <div class="container main-content">
+  {% include "../partials/footer.html" %}
 
-      <div class="gap2"></div>
-
-      <div class="terms">
-        <h4>2023 Data Academy</h4>
-        <h4>Termos de uso</h4>
-        <h4>Política de privacidade</h4>
-        <h4>Aviso de cookies</h4>
-      </div>
-    </div>
-  </section>
 </body>
 
 </html>
