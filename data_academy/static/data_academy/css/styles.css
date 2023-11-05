@@ -268,14 +268,16 @@ color: var(--color-dark-text);
 }
 
 .text2 h2{
-font-size: 3rem;
-color: var(--color-dark-text);
+  font-size: 3rem;
+  color: var(--color-white);
 }
 
 .text2 h3{
-font-size: 2rem;
-color: var(--color-dark-text);
+  font-size: 2rem;
+  color: var(--color-dark-text);
 }
+
+
 
 .main-title{
 display: flex;
@@ -375,11 +377,11 @@ text-align: center;
 display: flex;
 flex-direction: row;
 justify-content: center;
+align-items: center;
+padding-left: 2rem;
+padding-right: 2rem;
 border: .2rem solid var(--main-color-3) ;
 background-color: var(--color-white);
-padding-top: 3.5rem;
-padding-left: 4rem;
-padding-right: 4rem;
 border-radius: 6rem;
 min-width: 20rem;
 transition: 300ms all ease-in-out;
@@ -392,9 +394,9 @@ scale: 1.1;
 }
 
 .button-3 h3 {
-font-size: 2.5rem;
-color: var(--main-color-3);
-
+  font-size: 2.5rem;
+  color: var(--main-color-3);
+ 
 }
 
 .gap2{
@@ -408,7 +410,7 @@ margin-bottom: -250px;
 
 .hands img {
 height: auto;
-width: 88rem;
+width: 84rem;
 }
 
 
