@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interpretador Python</title>
+</head>
+<body>
+    <h1>Interpretador Python</h1>
+    <form method="post" action="{% url 'data_academy:interpretador' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Executar</button>
+    </form>
+</body>
+</html>
