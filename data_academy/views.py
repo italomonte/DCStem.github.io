@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from .forms import ScriptForm
+import io
+import sys
 # Create your views here.
 
 
@@ -12,17 +14,22 @@ def content (request):
 def login (request):
     return render(request, 'data_academy/pages/login.html')
 
+
 def interpretador(request):
     if request.method == 'POST':
-        form = ScriptForm(request.POST)
-        if form.is_valid():
-            code = form.cleaned_data['codigo']
-            try:
-                output = {}
-                exec(code, {}, output)
-                return render(request, 'data_academy/pages/resultado.html', {'output': output})
-            except Exception as e:
-                return render(request, 'data_academy/pages/erro.html', {'erro': str(e)})
-    else:
-        form = ScriptForm()
-    return render(request, 'data_academy/pages/interpretador.html', {'form': form})
+        code = request.POST.get('code', '')
+        # Execute o código aqui e capture a saída
+        # Crie um objeto StringIO para coletar a saída
+        output = io.StringIO()
+        sys.stdout = output  # Redirecione a saída padrão
+
+        try:
+            exec(code)
+        except Exception as e:
+            output.write(f'Erro: {str(e)}')
+
+        # Restaure a saída padrão original
+        sys.stdout = sys.__stdout__
+
+        return render(request, 'data_academy/pages/resultado.html', {'code': code, 'output': output.getvalue()})
+    return render(request, 'data_academy/pages/content.html')

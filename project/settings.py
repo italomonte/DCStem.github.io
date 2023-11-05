@@ -37,9 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     #my apps
     'data_academy',
 
+
+]
+
+JUPYTER_NOTEBOOK_ARGUMENTS = [
+    "--ip=0.0.0.0",
 ]
 
 MIDDLEWARE = [
