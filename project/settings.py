@@ -44,10 +44,6 @@ INSTALLED_APPS = [
 
 ]
 
-JUPYTER_NOTEBOOK_ARGUMENTS = [
-    "--ip=0.0.0.0",
-]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

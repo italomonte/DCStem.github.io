@@ -1,21 +1,18 @@
-from django.shortcuts import render, HttpResponse
-from .forms import ScriptForm
+from django.shortcuts import render
+from django.http import JsonResponse
 import io
 import sys
+
 # Create your views here.
 
 
 def home (request):
     return render(request, 'data_academy/pages/home.html')
 
-def content (request):
-    return render(request, 'data_academy/pages/content.html')
-
 def login (request):
     return render(request, 'data_academy/pages/login.html')
 
-
-def interpretador(request):
+def content(request):
     if request.method == 'POST':
         code = request.POST.get('code', '')
         # Execute o código aqui e capture a saída
@@ -30,6 +27,7 @@ def interpretador(request):
 
         # Restaure a saída padrão original
         sys.stdout = sys.__stdout__
-
-        return render(request, 'data_academy/pages/resultado.html', {'code': code, 'output': output.getvalue()})
+        responseData = {'code': code, 'output': output.getvalue()}
+        return JsonResponse(responseData)
     return render(request, 'data_academy/pages/content.html')
+

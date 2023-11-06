@@ -444,9 +444,4 @@ font-size: 4rem;
 color: var(--color-dark-text);
 }
 
-.background-editor{
-  background-color: var(--color-gray-5);
-  border-radius: 2rem;
-  padding: var(--spacing-gutter-short);
-}
 

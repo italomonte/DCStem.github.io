@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Academy | Alterar</title>
-    
-        <!--css-->
-        <link rel="stylesheet" href="../static/data_academy/css/styles.css">
-    
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Academy | Alterar</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="../../../static/data_academy/css/styles.css">
+    <link rel="stylesheet" href="../../../static/data_academy/css/menu.css">
+    <link rel="stylesheet" href="../../../static/data_academy/css/editor.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+    <script src="../../../static/data_academy/js/main.js"></script>
+</head>
+
 <body>
     {% include "../partials/header.html" %}
 
     <section class="section">
         <div class="container">
-            <form method="post">
-                {% csrf_token %}
-                <textarea name="code" rows="10" cols="50"></textarea>
-                <button type="submit">Executar</button>
-            </form>
-              
-        </div>
+            <div class="compiler">
+                <form method="post" class="input-container">
+                    {% csrf_token %}
+                    <textarea id="editor" name="code" rows="10" cols="50"></textarea>
+                    <button type="submit">Executar</button>
+                </form>
+                <div class="output-container">
+                    <textarea id="output" rows="10" cols="50"></textarea>
+                </div>
+            </div>
             
+        </div>
+
     </section>
+
+
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.querySelector('form');
+        var outputElement = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    outputElement.textContent = data.output;
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    outputElement.textContent = 'Ocorreu um erro ao executar o código.';
+                });
+        });
+    });
+
+</script>
+
+
+
 </html>
