@@ -9,5 +9,4 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('content/', views.content, name="content"),
     path('login/', views.login, name="login"),
-    path('table/', views.show_dataframe, name='table'),
 ]

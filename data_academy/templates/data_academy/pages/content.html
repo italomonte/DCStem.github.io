@@ -17,36 +17,39 @@
     {% include "../partials/header.html" %}
 
     <section class="section">
-        <div class="container">
-            <div class="container">
-                <div class="compiler">
+        <div class="container content">
+            
+            <div class="b-box">
+                {{ html_table|safe }}
+            </div>
+    
 
-                    <form method="post" class="input-container">
-                        {% csrf_token %}
+            <div class="compiler">
 
-                        <button type="submit">Executar</button>
+                <form method="post" class="input-container">
+                    {% csrf_token %}
 
-                        <div id="editora" class="editora">
-                            <textarea name="code" id="editor" cols="30" rows="10"></textarea>
-                        </div>
+                    <button type="submit">Executar</button>
 
-                    </form>
-
-
-                    <div class="output-container">
-                        <textarea id="output" rows="10" cols="50"></textarea>
+                    <div id="editora" class="editora">
+                        <textarea name="code" id="editor" cols="30" rows="10"></textarea>
                     </div>
+
+                </form>
+
+                <div class="output-container">
+                    <textarea id="output" rows="10" cols="50"></textarea>
                 </div>
 
             </div>
+                
 
         </div>
 
-
+        
     </section>
 
-    <a href="{% url "data_academy:table" %}" class="abobrinha">table</a>
-
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
     <script src="../../../static/data_academy/js/main.js"></script>

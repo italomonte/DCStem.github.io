@@ -17,13 +17,14 @@ def login (request):
     return render(request, 'data_academy/pages/login.html')
 
 def content(request):
+
     if request.method == 'POST':
         code = request.POST.get('code', '')
         # Execute o código aqui e capture a saída
         # Crie um objeto StringIO para coletar a saída
         output = io.StringIO()
         sys.stdout = output  # Redirecione a saída padrão
-
+        df = pd.read_csv("data_academy/media/data_academy/csv/airline-safety.csv")
         try:
             exec(code)
         except Exception as e:
@@ -33,18 +34,18 @@ def content(request):
         sys.stdout = sys.__stdout__
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
-    return render(request, 'data_academy/pages/content.html')
+
+    def highlight_bg(val):
+        return f'background-color: white'
+
+    df = pd.read_csv("data_academy/media/data_academy/csv/airline-safety.csv")
+    df = df.head()
+
+    styled_df = df.style.applymap(lambda x: highlight_bg(x))
+    html_table = styled_df.to_html()
 
 
-def show_dataframe(request):
-    # Seu DataFrame (pode ser obtido de onde for necessário)
-    data = {
-        'Nome': ['Alice', 'Bob', 'Charlie', 'David'],
-        'Idade': [25, 30, 35, 40],
-        'Cidade': ['São Paulo', 'Rio de Janeiro', 'Salvador', 'Brasília']
-    }
+    
+    return render(request, 'data_academy/pages/content.html', {'html_table': html_table})
 
-    df = pd.DataFrame(data)
-    html_table = df.to_html()
 
-    return render(request, 'data_academy/pages/tabela.html', {'html_table': html_table})

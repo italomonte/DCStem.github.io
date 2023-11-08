@@ -1,0 +1,53 @@
+:root {
+    --main-color-1: #2168ED;
+    --main-color-2: #9ebcea;
+    --main-color-3:#0cbc8b;
+    --main-color-4: #DBE8F4;
+    --main-color-5: #F2CD41;
+    
+  
+    --color-primary: #269fe6;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #073336;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light: #d4ecfa;
+    --color-primary-light-hover: #bdd8e7;
+  
+    --color-white: #ffffff;
+    --color-black: #000;
+  
+    --color-dark-text: #2C2C2C;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+  
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+  
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #c7c7c7;
+    --color-gray-3: #aeaeae;
+    --color-gray-4: #959595;
+    --color-gray-5: #7d7d7d;
+    --color-gray-6: #646464;
+    --color-gray-7: #4b4b4b;
+    --color-gray-8: #323232;
+    --color-gray-9: #191919;
+  
+    --font-primary: sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+  
+    --spacing-gutter-short: 2rem;
+    --spacing-gutter-medium: 3rem;
+    --spacing-gutter-large: 4rem;
+    --spacing-gutter-super-large: 6rem;
+  
+  }
