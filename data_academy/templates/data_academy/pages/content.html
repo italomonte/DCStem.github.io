@@ -18,29 +18,34 @@
 
     <section class="section">
         <div class="container">
-            <div class="compiler">
-                
-                <form method="post" class="input-container">
-                    {% csrf_token %}
-                    
-                    <button type="submit">Executar</button>
-                    
-                    <div id="editora" class="editora">
-                        <textarea name="code" id="editor" cols="30" rows="10"></textarea>                        
+            <div class="container">
+                <div class="compiler">
+
+                    <form method="post" class="input-container">
+                        {% csrf_token %}
+
+                        <button type="submit">Executar</button>
+
+                        <div id="editora" class="editora">
+                            <textarea name="code" id="editor" cols="30" rows="10"></textarea>
+                        </div>
+
+                    </form>
+
+
+                    <div class="output-container">
+                        <textarea id="output" rows="10" cols="50"></textarea>
                     </div>
-                    
-                </form>
-                
-                
-                <div class="output-container">
-                    <textarea id="output" rows="10" cols="50"></textarea>
                 </div>
+
             </div>
-            
+
         </div>
 
+
+
     </section>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
     <script src="../../../static/data_academy/js/main.js"></script>
 </body>
@@ -50,7 +55,7 @@
         var form = document.querySelector('form');
         var outputElement = document.getElementById('output');
         var editor = ace.edit('editora');
-    
+
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
@@ -73,7 +78,7 @@
                 });
         });
     });
-    
+
 </script>
 
 

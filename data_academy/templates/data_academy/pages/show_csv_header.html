@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cabeçalho CSV</title>
+</head>
+<body>
+    <h1>Cabeçalho do CSV</h1>
+    <ul>
+        {% for column in header %}
+            <li>{{ column }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
