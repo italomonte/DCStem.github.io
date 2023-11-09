@@ -35,18 +35,9 @@ def content(request):
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
 
-    def highlight_bg(val):
-        return f'background-color: white'
+    return render(request, 'data_academy/pages/content.html')
 
-    df = pd.read_html("data_academy/media/data_academy/html/table.html")
-    df = df.head()
 
-    html_table = df.to_html()
-  
-
-    
-    return render(request, 'data_academy/pages/content.html', {'html_table': html_table})
-
-def table (request):
+def table(request):
     return render(request, 'data_academy/pages/table.html')
-    
+
