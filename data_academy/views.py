@@ -38,14 +38,15 @@ def content(request):
     def highlight_bg(val):
         return f'background-color: white'
 
-    df = pd.read_csv("data_academy/media/data_academy/csv/airline-safety.csv")
+    df = pd.read_html("data_academy/media/data_academy/html/table.html")
     df = df.head()
 
-    styled_df = df.style.applymap(lambda x: highlight_bg(x))
-    html_table = styled_df.to_html()
-
+    html_table = df.to_html()
+  
 
     
     return render(request, 'data_academy/pages/content.html', {'html_table': html_table})
 
-
+def table (request):
+    return render(request, 'data_academy/pages/table.html')
+    
