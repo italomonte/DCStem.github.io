@@ -35,6 +35,7 @@ def content(request):
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
 
+
     return render(request, 'data_academy/pages/content.html')
 
 
