@@ -11,21 +11,9 @@
   background-color: var(--main-color-2);
   border-radius: var(--spacing-gutter-short);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   gap: 2rem;
   width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-
-
-}
-
-.b-box{
-  background-color: var(--main-color-2);
-  border-radius: var(--spacing-gutter-short);
-  display: flex;
-  justify-content: center;
   padding: 1rem;
   box-sizing: border-box;
 
@@ -41,7 +29,7 @@
   align-items:end;
   gap: 2rem;
   min-width: 50%;
-  height: 300px;
+  height: 600px;
 }
 
 .input-container button{
@@ -63,7 +51,7 @@
 .output-container{
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 100%;
   
 }
 
