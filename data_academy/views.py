@@ -24,7 +24,7 @@ def content(request):
         # Crie um objeto StringIO para coletar a saída
         output = io.StringIO()
         sys.stdout = output  # Redirecione a saída padrão
-        df = pd.read_csv("data_academy/media/data_academy/csv/airline-safety.csv")
+        df = pd.read_csv("data_academy\media\data_academy\csv\streaming_viewership_data.csv")
         try:
             exec(code)
         except Exception as e:
@@ -35,8 +35,10 @@ def content(request):
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
 
+    df = pd.read_csv("data_academy\media\data_academy\csv\streaming_viewership_data.csv")
+    html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
-    return render(request, 'data_academy/pages/content.html')
+    return render(request, 'data_academy/pages/content.html', {"table": html_table})
 
 
 def table(request):
