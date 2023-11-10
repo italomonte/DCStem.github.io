@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Academy | Alterar</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
@@ -26,7 +30,17 @@
     {% include "../partials/header.html" %}
 
     <section class="section">
-        <div class="container content">
+        <div class="container main-content content">
+            
+            <h1>Análise de Notas Escolares</h1>
+            <div class="box-style">
+                <h2>Pera aí! Antes de começar deixa eu te explicar como ensinamos. </h2>
+            </div>
+
+            <div class="box-style">
+                <h2>O primeiro passo da abp é a coleta de dados</h2>
+            </div>
+
             <div style="width:100% box-sizing: border-box;">
                 {{table|safe}}
             </div>

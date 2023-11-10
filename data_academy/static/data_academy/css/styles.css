@@ -80,6 +80,12 @@ font-size: 4rem;
 min-height: fit-content;
 }
 
+.main-content {
+  max-width: 120rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .blue-bg{
 background-color: var(--main-color-4);
 }
@@ -94,13 +100,8 @@ background-color: var(--main-color-4);
 background-color: var(--main-color-1);
 
 }
-.main-content {
-max-width: 120rem;
-padding-left: 6rem;
-padding-right: 6rem;
 
 
-}
 .grid-1 {
 display: grid;
 grid-template-columns: 2fr 1fr;

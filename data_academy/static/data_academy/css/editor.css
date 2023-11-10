@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: baseline;
-  gap: 2rem;
+  gap: 4rem;
   box-sizing: border-box;
 
 }
@@ -17,6 +17,19 @@
   padding: 1rem;
   box-sizing: border-box;
 
+}
+
+.box-style{
+  background-color: var(--main-color-5);
+  border-radius: var(--spacing-gutter-short);
+  width: 100%;
+  padding: 1rem;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .s_table{
@@ -60,4 +73,8 @@
   border-radius: 1rem;
   min-height: 100%;
 
+}
+
+.gapper{
+  gap: 4rem;
 }
