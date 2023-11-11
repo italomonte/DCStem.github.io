@@ -30,26 +30,33 @@ font-size: 4rem;
   }
   
 .menu-content {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu-content ul {
-list-style: none;
-display: flex;
-}
-
-
-.menu-content ul li a {
-padding: 2rem;
-font-size: 1.8rem;
-position: relative;
+.logo{
+  font-size: 2.8rem;
 
 }
 
-.menu-content ul li a::after{
+.menu-item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.menu-item a{
+  font-size: 2.8rem;
+  padding: 2rem;
+  position: relative;
+}
+
+
+.menu-item a::after{
 content: '';
 position: absolute;
 bottom: 1rem;
@@ -61,11 +68,10 @@ transition: all 300ms ease-in-out;
 }
 
 
-.menu-content ul li a:hover::after{
+.menu-item a:hover::after{
 width: 50%;
 left: 25%;
 }
-
 
 
 .container {
@@ -291,13 +297,14 @@ padding-top: 10rem;
 gap: 4rem;
 }
 
-.boxes-2{
-display: flex;
-justify-content: center;
-padding-top: 10rem;
-padding-left: 32rem;
-gap: 4rem;
-margin-bottom: -100px;
+  .boxes-2{
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-left: 32rem;
+  gap: 4rem;
+  margin-bottom: -100px;
+  z-index: 1;
 }
 
 .button-2{
@@ -358,25 +365,27 @@ padding: 12rem;
 }
 
 .hands {
-margin-bottom: -250px;
+  margin-bottom: -250px;
+  z-index: 0;
 
 }
 
 .hands img {
-height: auto;
-width: 84rem;
+  height: auto;
+  width: 84rem;
+  z-index: 0;
 }
 
 
 .terms{
-display: flex;
-flex-direction: row;
-justify-content: left;
-gap: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 4rem;
 }
 
 .terms h4 {
-color: var(--color-white); 
+  color: var(--color-white); 
 }
 
 .text3{
@@ -388,13 +397,13 @@ color: var(--color-white);
   }
   
 .text3 h1{
-font-size: 5rem;
-color: var(--main-color-1);
+  font-size: 5rem;
+  color: var(--main-color-1);
 }
 
 .text3 h2{
-font-size: 4rem;
-color: var(--color-dark-text);
+  font-size: 4rem;
+  color: var(--color-dark-text);
 }
 
 

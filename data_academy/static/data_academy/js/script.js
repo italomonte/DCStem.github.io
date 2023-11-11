@@ -13,6 +13,14 @@ function showSlide(index) {
 
 function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
+  console.log("Próximo Slide:", currentSlide);
+  showSlide(currentSlide);
+}
+
+function previousSlide() {
+  // Subtrai 1 do índice atual e adiciona o comprimento dos slides para evitar índices negativos
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  console.log("Slide Anterior:", currentSlide);
   showSlide(currentSlide);
 }
 
