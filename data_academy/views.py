@@ -1,11 +1,11 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from django.http import JsonResponse
+import plotly.express as px
 import io
 import sys
 import pandas as pd
 import csv
-from django.http import HttpResponse
-from django.shortcuts import render
 
 # Create your views here.
 
@@ -24,7 +24,7 @@ def content(request):
         # Crie um objeto StringIO para coletar a saída
         output = io.StringIO()
         sys.stdout = output  # Redirecione a saída padrão
-        df = pd.read_csv("data_academy\media\data_academy\csv\dados_notas_alunos.csv")
+        df = pd.read_csv("data_academy\static\data_academy\csv\soda.csv")
         try:
             exec(code)
         except Exception as e:
@@ -35,12 +35,23 @@ def content(request):
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
 
-    df = pd.read_csv("data_academy\media\data_academy\csv\dados_notas_alunos.csv")
+    df = pd.read_csv("data_academy\static\data_academy\csv\soda.csv")
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
     return render(request, 'data_academy/pages/content.html', {"table": html_table})
 
+def grafh(request):
+    df = pd.DataFrame({
+    'Categoria': ['A', 'B', 'C', 'D'],
+    'Valores': [30, 40, 15, 25]
+    })
 
-def table(request):
-    return render(request, 'data_academy/pages/table.html')
+    fig = px.bar(df, x='Categoria', y='Valores', title='Exemplo de Gráfico de Barras')
 
+    graph_html = fig.to_html(full_html=False)
+
+
+    return render(request, 'data_academy/pages/table.html', {'grafh': graph_html})
+
+def slide(request):
+    return render(request, 'data_academy/pages/slide.html')

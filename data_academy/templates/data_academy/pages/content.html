@@ -1,72 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Academy | Alterar</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!--css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
-
-    <link rel="stylesheet" href="../../../static/data_academy/css/styles.css">
-    <link rel="stylesheet" href="../../../static/data_academy/css/menu.css">
-    <link rel="stylesheet" href="../../../static/data_academy/css/editor.css">
-    <link rel="stylesheet" href="../../../static/data_academy/css/root.css">
-
-    <!--js-->
-    <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script defer src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script defer src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-
-</head>
+{% include "../partials/head.html" %}
 
 <body>
     {% include "../partials/header.html" %}
 
     <section class="section">
         <div class="container main-content content">
-            
-            <h1>Análise de Notas Escolares</h1>
-            <div class="box-style">
-                <h2>Pera aí! Antes de começar deixa eu te explicar como ensinamos. </h2>
-            </div>
 
-            <div class="box-style">
-                <h2>O primeiro passo da abp é a coleta de dados</h2>
-            </div>
+            <h1>Media Aritmética</h1>
 
-            <div style="width:100% box-sizing: border-box;">
-                {{table|safe}}
-            </div>
+            <button onclick="nextSlide()">Próximo Slide</button>
 
-            <div class="compiler">
-                
-                <form method="post" class="input-container">
-                    {% csrf_token %}
+            <div class="slider">
+                <div class="slide" id="slide1">
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Aviso</h2>
 
-                    <button type="submit">Executar</button>
+                    <div class="box-style">
+                        <h2>Pera aí! Como esse é o primeiro assunto do site, queremos te explicar uma coisinha!</h2>
+                        <h2>Caso ainda não saiba aqui nesse ambiente utilizamos uma técinica diferente pra ensinar, a
+                            ABP.</h2>
+                        <h2> ABP se destaca por ser uma abordagem educacional que coloca os alunos no centro do processo
+                            de ensino-aprendizagem, incentivando-os a desenvolver habilidades para resolução de
+                            problemas, pensamento crítico e colaboração. Esse método tem como característica instigar o
+                            estudante a pensar criticamente por si próprio, buscando novas fontes de conhecimento para
+                            resolver os desafios do mundo real. Promovendo uma compreensão mais profunda dos conceitos e
+                            uma aplicação prática do conhecimento.
+                        </h2>
+                    </div>
+                </div>
 
-                    <div id="editora" class="editora">
-                        <textarea name="code" id="editor" cols="30" rows="10"></textarea>
+                <div class="slide" id="slide2">
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Contexto</h2>
+
+                    <div class="box-style">
+                        <h2>Você é um engenheiro de produção em uma fábrica de refrigerantes. A empresa está
+                            comprometida em manter altos padrões de qualidade e sabor consistente em seus produtos. No
+                            entanto, recentemente, a gerência percebeu que algumas máquinas de envase estão apresentando
+                            variações na quantidade de refrigerante em cada garrafa.</h2>
                     </div>
 
-                </form>
+                </div>
 
-                <div class="output-container">
-                    <textarea id="output" rows="10" cols="50"></textarea>
+                <div class="slide" id="slide3">
+
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Desafio</h2>
+
+                    <div class="box-style">
+                        <h2>Sua tarefa é analisar a produção de uma linha específica de envase e determinar se a
+                            quantidade de refrigerante nas garrafas está dentro dos padrões estabelecidos. Para fazer
+                            isso, você precisa calcular a média aritmética do volume de refrigerante em uma amostra de
+                            garrafas.</h2>
+                    </div>
+
+                </div>
+
+                <div class="slide" id="slide4">
+
+                    <div style="width:100% box-sizing: border-box;">
+                        {{table|safe}}
+                    </div>
+
+                </div>
+
+                <div class="slide" id="slide5">
+                    <div class="compiler">
+
+                        <form method="post" class="input-container">
+                            {% csrf_token %}
+
+                            <button style="margin:0 auto;" type="submit">Executar</button>
+
+                            <div id="editora" class="editora">
+                                <textarea name="code" id="editor" cols="30" rows="10"></textarea>
+                            </div>
+
+                        </form>
+
+                        <div class="output-container">
+                            <textarea id="output" rows="10" cols="50"></textarea>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
 
 
-        </div>
 
+        </div>
 
     </section>
 
@@ -74,12 +97,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
     <script src="../../../static/data_academy/js/main.js"></script>
+    <script src="../../../static/data_academy/js/script.js"></script>
+
+
 </body>
 
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         new DataTable('#example');
-        
+
         var form = document.querySelector('form');
         var outputElement = document.getElementById('output');
         var editor = ace.edit('editora');
@@ -106,6 +133,7 @@
                 });
         });
     });
+
 
 </script>
 
