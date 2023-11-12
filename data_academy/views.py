@@ -55,3 +55,6 @@ def grafh(request):
 
 def slide(request):
     return render(request, 'data_academy/pages/slide.html')
+
+df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
+print(df)

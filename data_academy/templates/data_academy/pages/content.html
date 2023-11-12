@@ -53,7 +53,7 @@
                     </div>
 
                     <div class=" box-style engineer2" >
-                        <img src="../../../static/data_academy/imgs/production-engineer-2-short.png" alt="production-engineer-2-short">
+                        <img src="../../../static/data_academy/imgs/manager-1-short.png" alt="manager-1-short">
                     </div>
 
                 </div>
@@ -63,7 +63,21 @@
                     <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Objetivo</h2>
 
                     <div class="box-style">
-                        <h2>Sua tarefa é analisar a produção de uma linha específica de envase e determinar se o volume de líquido, e o pH em cada garrafa estão dentro dos padrões estabelecidos.
+                        <h2>Sua tarefa é analisar a produção de uma linha específica de envase e determinar se o volume de líquido, e o pH em cada garrafa estão dentro dos padrões estabelecidos.</h2>
+                    </div>
+
+                    <div class=" box-style engineer2" >
+                        <img src="../../../static/data_academy/imgs/production-engineer-2-short.png" alt="production-engineer-2-short">
+                    </div>
+
+                </div>
+
+                <div class="slide" id="slide5">
+
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Análise</h2>
+
+                    <div class="box-style">
+                        <h2>Depois de realizada uma amostragem sistemática de três garrafas de uma em uma hora, totalizando ao final de um dia 72 unidades, você, o engenheiro responsável pela análise deste problema, pode partir para a investigação desses erros.
                         </h2>
                     </div>
 
@@ -73,8 +87,12 @@
 
                 </div>
 
-                <div class="slide" id="slide5">
+                <div class="slide" id="slide6">
                     <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Base de Dados</h2>
+
+                    <div class="box-style">
+                        <h2>Aqui você pode dar uma olhada na base de dados!</h2>
+                    </div>
 
                     <div style="width:100%; box-sizing: border-box;">
                         {{table|safe}}
@@ -82,7 +100,7 @@
 
                 </div>
 
-                <div class="slide" id="slide6">
+                <div class="slide" id="slide7">
                     <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Compilador</h2>
                     
                     <div class="compiler">
@@ -93,13 +111,15 @@
                             <button style="margin:0 auto;" type="submit">Executar</button>
 
                             <div id="editora" class="editora">
-                                <textarea name="code" id="editor" cols="30" rows="10"></textarea>
+                                <textarea name="code" ></textarea>
                             </div>
 
                         </form>
 
                         <div class="output-container">
-                            <textarea id="output" rows="10" cols="50"></textarea>
+                            <pre id="output">
+                                
+                            </pre>
                         </div>
 
                     </div>
@@ -156,6 +176,7 @@
         showSlide(currentSlide);
         console.log("voltou");
     }
+    
 
     document.addEventListener('DOMContentLoaded', function () {
         showSlide(currentSlide);
@@ -166,14 +187,17 @@
         var form = document.querySelector('form');
         var outputElement = document.getElementById('output');
         var editor = ace.edit('editora');
+        outputElement.readOnly = true;
+
 
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
             var code = editor.getValue();
-
             var formData = new FormData(form);
             formData.append('code', code);
+
+            outputElement.textContent = '';
 
             fetch(form.action, {
                 method: 'POST',
@@ -181,11 +205,14 @@
             })
                 .then(response => response.json())
                 .then(data => {
+
                     outputElement.textContent = data.output;
+
                 })
                 .catch(error => {
                     console.error('Erro:', error);
                     outputElement.textContent = 'Ocorreu um erro ao executar o código.';
+
                 });
         });
     });
