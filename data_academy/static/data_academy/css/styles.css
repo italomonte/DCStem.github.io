@@ -27,6 +27,7 @@ font-size: 4rem;
 
 .header-content {
   background-color: var(--main-color-1);
+  max-height: 150px;
   }
   
 .menu-content {
@@ -37,8 +38,23 @@ font-size: 4rem;
 }
 
 .logo{
-  font-size: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.logo1{
+  font-family: 'Jomhuria', serif;
+  font-size: 9.2rem;
+  margin-bottom: -6rem;
+  margin-top: -4rem;
+  text-align: center;
+}
+
+.logo2{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 4.5rem;
+  margin-bottom: -2rem;
 }
 
 .menu-item {
@@ -50,8 +66,12 @@ font-size: 4rem;
 
 
 .menu-item a{
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-family: var(--font-headings);
   padding: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   position: relative;
 }
 
@@ -87,7 +107,6 @@ min-height: fit-content;
 }
 
 .main-content {
-  max-width: 120rem;
   padding-left: 6rem;
   padding-right: 6rem;
 }
@@ -110,8 +129,8 @@ background-color: var(--main-color-1);
 
 .grid-1 {
 display: grid;
-grid-template-columns: 2fr 1fr;
-gap: var(--spacing-gutter-short);
+grid-template-columns: 1.5fr 1fr;
+gap: 1rem;
 }
 
 .gap {
@@ -126,21 +145,27 @@ font-size: 5rem;
 
 
 .text1{
-display: flex;
-flex-direction: column;
-justify-content: top;
-gap: 4rem;
-padding: var(--spacing-gutter-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: var(--spacing-gutter-medium);
 }
 
 .text1 h1{
-font-size: 5rem;
-color: var(--main-color-1);
+  font-size: 5.6rem;
+  color: var(--main-color-1);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .text1 h2{
-font-size: 3rem;
-color: var(--color-dark-text);
+  font-size: 3rem;
+  color: var(--color-dark-text);
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .text1 h3{
@@ -149,36 +174,41 @@ color: var(--color-dark-text);
 }
 
 .button{
-background-color: var(--main-color-3);
-border-radius: 4rem;
-max-width: fit-content;
-padding: var(--spacing-gutter-short);
-box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
+  background-color: var(--main-color-3);
+  border-radius: 9.3rem;
+  max-width: fit-content;
+  padding: var(--spacing-gutter-short);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
 
 }
 
 .button h2{
-color: var(--color-white);
-margin-left: var(--spacing-gutter-short);
-margin-right: var(--spacing-gutter-short);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color-white);
+  margin-left: var(--spacing-gutter-short);
+  margin-right: var(--spacing-gutter-short);
 }
 
 
 .square-computer-boy{
-border: .4rem solid var(--main-color-1);
-border-radius: 12rem;
-background-color: var(--color-white);
-display: flex;
-align-items: center;
-box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
-
-
+  border: .4rem solid var(--main-color-1);
+  border-radius: 12rem;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  box-shadow: -8px 6px 20px 2px rgba(0, 0, 0, 0.25);
+  min-width: 40rem;
+  min-height: 100%;
 }
 
 .square-computer-boy img{
-max-width: 100%;
-height: auto;
-
+  max-width: 100%;
+  height: auto;
 }
 
 .grid-2 {
@@ -297,7 +327,7 @@ padding-top: 10rem;
 gap: 4rem;
 }
 
-  .boxes-2{
+.boxes-2{
   display: flex;
   justify-content: center;
   padding-top: 10rem;
@@ -321,6 +351,7 @@ padding-right: 4rem;
 border-radius: 6rem;
 transition: 300ms all ease-in-out;
 box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
+z-index: 1;
 
 }
 
@@ -357,7 +388,7 @@ scale: 1.1;
 .button-3 h3 {
   font-size: 2.5rem;
   color: var(--main-color-3);
- 
+  text-align: center;
 }
 
 .gap2{
