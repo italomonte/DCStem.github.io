@@ -212,9 +212,9 @@ color: var(--color-dark-text);
 }
 
 .grid-2 {
-display: grid;
-grid-template-columns: 1fr 1.5fr;
-gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
 }
 
 .sally-box{
@@ -224,15 +224,20 @@ gap: 3rem;
   flex-flow: column nowrap;
   align-items: top;
   box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
-  max-height: 80%;
+  max-height: 90%;
+  z-index: 1;
 }
 
 .sally-box img{
   max-width: 100%;
   height: auto;
+  z-index: 0;
+
 }
 
 .sally{
+  z-index: 0;
+
   scale: 1.3;
   position: relative;
   bottom: 10rem;
@@ -258,15 +263,16 @@ gap: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: top;
+  padding: 2rem;
 }
 
 .text2 h1{
   font-size: 5rem;
-  color: var(--color-dark-text);
+  color: #073336;
 }
 
 .text2 h3{
-  font-size: 2.4rem;
+  font-size: 2.43rem;
   color: #000;
   text-align: justify;
   font-style: normal;
