@@ -26,6 +26,10 @@ def content(request):
         output = io.StringIO()
         sys.stdout = output  # Redirecione a saída padrão
         df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
+        pd.set_option('display.max_rows', None)
+        pd.set_option('display.max_columns', None)
+        pd.set_option('display.width', None)
+
         try:
             exec(code)
         except Exception as e:
