@@ -16,8 +16,10 @@ def home (request):
 def login (request):
     return render(request, 'data_academy/pages/login.html')
 
-
 def content(request):
+    return render(request, 'data_academy/pages/content.html')
+
+def descripe_statistic(request):
 
     if request.method == 'POST':
         code = request.POST.get('code', '')
@@ -43,7 +45,7 @@ def content(request):
     df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
-    return render(request, 'data_academy/pages/content.html', {"table": html_table})
+    return render(request, 'data_academy/pages/descripe_statistic.html', {"table": html_table})
 
 def grafh(request):
     df = pd.DataFrame({
@@ -56,10 +58,7 @@ def grafh(request):
     graph_html = fig.to_html(full_html=False)
 
 
-    return render(request, 'data_academy/pages/table.html', {'grafh': graph_html})
+    return render(request, 'data_academy/pages/grafh.html', {'grafh': graph_html})
 
 def slide(request):
     return render(request, 'data_academy/pages/slide.html')
-
-df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
-print(df)
