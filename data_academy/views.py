@@ -16,6 +16,7 @@ def home (request):
 def login (request):
     return render(request, 'data_academy/pages/login.html')
 
+
 def content(request):
 
     if request.method == 'POST':

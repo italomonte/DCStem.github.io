@@ -83,6 +83,7 @@
 
 .output-container{
   display: flex;
+  padding: 1rem;
   flex-direction: column;
   justify-content: top;
   align-items: baseline;
@@ -95,6 +96,7 @@
 .output-container pre{
   padding: 1rem;
   text-align: start;
+  min-width: 100%;
 }
 
 .gapper{
