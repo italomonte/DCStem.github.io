@@ -413,8 +413,9 @@ scale: 1.1;
   text-align: center;
 }
 
-.gap2{
-padding: 12rem;
+.hands-base{
+  padding: 12rem;
+  background-color: var(--main-color-1);
 }
 
 .hands {

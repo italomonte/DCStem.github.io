@@ -1,20 +1,65 @@
-.button-content{
-    border: .2rem solid var(--main-color-1);
-    border-radius: 1rem;
-    background-color: white;
-    margin: 1rem;
-    width: 25%;
+.main-grid{
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 3rem;
 }
 
-.button-content a {
-    width: 100%;
-    height: 100%;
+.grid-content{
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 6rem;
 }
 
-.button-content h2{
-    font-family: var(--font-headings);
-    font-size: 2rem;
+.unit-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.unit-content h2{
+    margin: 0 auto;
     color: var(--main-color-1);
+    font-weight: 500;
+    font-family: var(--font-headings);
+}
+
+
+
+.unit-box{
+    background-color: #BDD3F8;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 100%;
+    height: 30rem;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.unit-box h3{
+    margin-top: 1rem;
     text-align: center;
-    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-headings);
+}
+    
+.unit-box h4{
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--font-headings);
+    text-decoration: underline;
+}
+
+.line {
+    margin-top: -.5rem;
+    width: 100%;
+    height: .2rem;
+    background-color: var(--main-color-1);
 }

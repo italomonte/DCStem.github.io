@@ -5,6 +5,7 @@ import plotly.express as px
 import io
 import sys
 import pandas as pd
+import statistics as st
 import csv
 
 # Create your views here.
