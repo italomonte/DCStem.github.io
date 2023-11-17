@@ -1,0 +1,21 @@
+.subject-button{
+    display: flex;
+    background-color: var(--main-color-1);
+    border-radius: 50%;
+    font-family: var(--main-headings);
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.subject-button:hover{
+    background-color: var(--main-color-2);
+}
+

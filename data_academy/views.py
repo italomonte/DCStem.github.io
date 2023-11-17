@@ -8,9 +8,12 @@ import sys
 def home (request):
     return render(request, 'data_academy/pages/home.html')
 
-
 def content(request):
     return render(request, 'data_academy/pages/content.html')
+
+
+def content_road(request):
+    return render(request, 'data_academy/pages/content_road.html')
 
 
 def login (request):
@@ -43,4 +46,4 @@ def task(request):
     df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
-    return render(request, 'data_academy/pages/descripe_statistic.html', {"table": html_table})
+    return render(request, 'data_academy/pages/task.html', {"table": html_table})

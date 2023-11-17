@@ -1,0 +1,69 @@
+
+.header-content {
+    background-color: var(--main-color-1);
+    max-height: 150px;
+    }
+    
+  .menu-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .logo1{
+    font-family: 'Jomhuria', serif;
+    font-size: 9.2rem;
+    margin-bottom: -6rem;
+    margin-top: -4rem;
+    text-align: center;
+  }
+  
+  .logo2{
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: -2rem;
+  }
+  
+  .menu-item {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  
+  .menu-item a{
+    font-size: 3rem;
+    font-family: var(--font-headings);
+    padding: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+  }
+  
+  
+  .menu-item a::after{
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--main-color-2);
+  transition: all 300ms ease-in-out;
+  }
+  
+  
+  .menu-item a:hover::after{
+  width: 50%;
+  left: 25%;
+  }
+  
