@@ -1,26 +1,23 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.http import JsonResponse
-import plotly.express as px
+import pandas as pd
 import io
 import sys
-import pandas as pd
-import statistics as st
-import csv
-
 # Create your views here.
-
 
 def home (request):
     return render(request, 'data_academy/pages/home.html')
 
-def login (request):
-    return render(request, 'data_academy/pages/login.html')
 
 def content(request):
     return render(request, 'data_academy/pages/content.html')
 
-def descripe_statistic(request):
+
+def login (request):
+    return render(request, 'data_academy/pages/login.html')
+
+
+def task(request):
 
     if request.method == 'POST':
         code = request.POST.get('code', '')
@@ -47,19 +44,3 @@ def descripe_statistic(request):
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
     return render(request, 'data_academy/pages/descripe_statistic.html', {"table": html_table})
-
-def grafh(request):
-    df = pd.DataFrame({
-    'Categoria': ['A', 'B', 'C', 'D'],
-    'Valores': [30, 40, 15, 25]
-    })
-
-    fig = px.bar(df, x='Categoria', y='Valores', title='Exemplo de Gráfico de Barras')
-
-    graph_html = fig.to_html(full_html=False)
-
-
-    return render(request, 'data_academy/pages/grafh.html', {'grafh': graph_html})
-
-def slide(request):
-    return render(request, 'data_academy/pages/slide.html')
