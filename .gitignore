@@ -130,4 +130,4 @@ db copy.sqlite3
 assets/
 
 #static
-static
+main_static
