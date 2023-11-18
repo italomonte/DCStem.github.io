@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 from django.http import JsonResponse
 import pandas as pd
@@ -43,7 +44,7 @@ def task(request):
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
 
-    df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
+    df = pd.read_csv("../../../static/data_academy/csv/BD_Refrigerante.csv")
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
     return render(request, 'data_academy/pages/task.html', {"table": html_table})
