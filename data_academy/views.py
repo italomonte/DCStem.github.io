@@ -4,6 +4,7 @@ from django.http import JsonResponse
 import pandas as pd
 import io
 import sys
+import os
 # Create your views here.
 
 def home (request):
@@ -22,6 +23,7 @@ def login (request):
 
 
 def task(request):
+    file_path = os.path.join( "data_academy","static", "data_academy", "csv", "BD_Refrigerante.csv")
 
     if request.method == 'POST':
         code = request.POST.get('code', '')
@@ -29,7 +31,7 @@ def task(request):
         # Crie um objeto StringIO para coletar a saída
         output = io.StringIO()
         sys.stdout = output  # Redirecione a saída padrão
-        df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
+        df = pd.read_csv(file_path)
         
         pd.set_option('display.max_rows', None)
         pd.set_option('display.max_columns', None)
@@ -44,7 +46,7 @@ def task(request):
         sys.stdout = sys.__stdout__
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
-    df = pd.read_csv("data_academy\static\data_academy\csv\BD_Refrigerante.csv")
+    df = pd.read_csv(file_path)
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
 
     return render(request, 'data_academy/pages/task.html', {"table": html_table})
