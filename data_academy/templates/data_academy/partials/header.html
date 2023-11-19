@@ -1,15 +1,23 @@
 <header>
     <div class="header-content">
-        <div class="container menu-content">
-            <nav>
-                <a class="logo" href="">
-                    <h2 class="logo1">DATA</h2>
-                    <h2 class="logo2">Academy</h2>
-                </a>
-            </nav>
+        <div class="menu-content">
+            <div class="menu-before">
+                <div class="menu-lines-box">
+                    <label for="toggle" class="menu-lines">&#9776;</label>
+                </div>
+                <div class="menu-logo-box">
+                    <a class="logo" href="">
+                        <h2 class="logo1">DATA</h2>
+                        <h2 class="logo2">Academy</h2>
+                    </a>
+                </div>
+                
+            </div>
 
-            <nav>
-                <ul class="menu-item">
+            
+            <div class="nav">
+                <input type="checkbox" id="toggle">
+                <ul class="menu">
                     <li><a href="{% url "data_academy:home" %}">
                         Início
                     </a></li>
@@ -21,7 +29,9 @@
                     </a></li>
                 </ul>
 
-            </nav>
+            </div>
+                
+            
         </div>
     </div>
 </header>

@@ -1,56 +1,62 @@
 
+
 .header-content {
-    background-color: var(--main-color-1);
-    max-height: 150px;
-    }
+  background-color: var(--main-color-1);
+  margin: 0 auto;
+
+}
     
-  .menu-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.menu-content {
+  margin: 0 auto;
+  padding: var(--spacing-gutter-medium);
+  max-width: 144rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   }
   
-  .logo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.logo1{
+  font-family: 'Jomhuria', serif;
+  font-size: 9.2rem;
+  margin-bottom: -6rem;
+  margin-top: -4rem;
+  text-align: center;
+}
   
-  .logo1{
-    font-family: 'Jomhuria', serif;
-    font-size: 9.2rem;
-    margin-bottom: -6rem;
-    margin-top: -4rem;
-    text-align: center;
-  }
+.logo2{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 4.5rem;
+  margin-bottom: -2rem;
+}
   
-  .logo2{
-    font-family: 'Kosugi Maru', sans-serif;
-    font-size: 4.5rem;
-    margin-bottom: -2rem;
-  }
-  
-  .menu-item {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
   
   
-  .menu-item a{
-    font-size: 3rem;
-    font-family: var(--font-headings);
-    padding: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    position: relative;
-  }
+.menu a{
+  font-size: 3rem;
+  font-family: var(--font-headings);
+  padding: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+}
   
   
-  .menu-item a::after{
+.menu a::after{
   content: '';
   position: absolute;
   bottom: 1rem;
@@ -59,11 +65,117 @@
   height: 0.2rem;
   background: var(--main-color-2);
   transition: all 300ms ease-in-out;
-  }
+}
   
   
-  .menu-item a:hover::after{
+  .menu a:hover::after{
   width: 50%;
   left: 25%;
-  }
+}
+
+label {
+	margin: 0 40px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: right;
+}
+
+#toggle {
+	display: none;
+}
+
+.menu-lines{
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  label {
+		display: block;
+		cursor: pointer;
+	}
+
+
   
+  .main-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .menu-content {
+    margin: 0 auto;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    max-width: 144rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:normal;
+  }
+
+  
+  .menu-before{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-logo-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-lines-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo1{
+    font-family: 'Jomhuria', serif;
+    font-size: 6.9rem;
+    margin-bottom: -4.5rem;
+    text-align: center;
+  }
+    
+  .logo2{
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 3.375rem;
+    margin-bottom: -3rem;
+  }
+
+  .menu {
+		text-align: left;
+		width: 100%;
+		display: none;
+    position: static;
+    padding: 0;
+	}
+
+  .menu a {
+		display: block;
+		margin: 2rem;
+		padding: 0;
+    font-size: 3rem;
+    font-family: var(--font-headings);
+    font-style: normal;
+    line-height: normal;
+    position: relative;
+	}
+  
+  .menu a:hover::after{
+    width: 0%;
+    left: 0%;
+  }
+
+
+	#toggle:checked + .menu {
+		display: block;
+	}
+}

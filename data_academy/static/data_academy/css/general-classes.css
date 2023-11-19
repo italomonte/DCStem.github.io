@@ -1,0 +1,49 @@
+
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+  }
+  
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.center_ja{
+    justify-content: center;
+    align-items: center;
+}
+
+.center_j{
+    justify-content: center;
+}
+
+.center_a{
+    align-items: center;
+}
+
+
+.grid-15-10 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.grid-10-15 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+
+.gap-2{
+    gap: 2rem;
+}
+
+.gap-4{
+    gap: 4rem;
+}
+
