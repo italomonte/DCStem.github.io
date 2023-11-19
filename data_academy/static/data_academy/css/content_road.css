@@ -1,21 +1,54 @@
-.subject-button{
+.content_road-container{
+    margin: 0 auto;
+    padding-left: var(--spacing-gutter-medium);
+    padding-right: var(--spacing-gutter-medium);
+    padding-top:0;
+    max-width: 144rem;
+    box-sizing: border-box;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    ;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 0.8fr;
+    
+}
+
+.content_side{
+    padding: 2rem;
     display: flex;
-    background-color: var(--main-color-1);
-    border-radius: 50%;
-    font-family: var(--main-headings);
-    font-size: 2.5rem;
-    font-weight: bold;
-    width: 10rem;
-    height: 10rem;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.1s ease;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    max-height: 40rem;
 }
 
-.subject-button:hover{
-    background-color: var(--main-color-2);
+.side-boxes-content-road{
+    border: 1px solid gray;
+    border-radius: 4rem;
+    width: 100%;
+    height: 50%;
+    padding: 2rem;
 }
 
+.section-road{
+    max-height: 100vh;
+    overflow-y: auto;
+    transition: scroll-behavior 0.05s ease-in-out;
+}
+
+
+.section-road::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+#subject-01{
+    margin-right: 14rem;
+}
+
+#subject-02{
+    margin-left: 14rem;
+}

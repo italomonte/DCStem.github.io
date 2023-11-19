@@ -7,21 +7,117 @@
 
     {% include "../partials/header.html" %}
 
-    <div class="container main-content ">
-        <div class="flex-column center_a ">
-            <div>
-                <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+    <div class="content_road-container">
+        <div class="grid-3">
+            <div class="flex-column center_a content_side">
+                <div class="side-boxes-content-road"></div>
+                <div class="side-boxes-content-road"></div>
             </div>
-            <div>
-                <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+            <div class="section-road">
+                <div class="flex-column center_a ">
+                    <div id="subject-01">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div >
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-02">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div >
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-01">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div >
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-02">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-01">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-02">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div >
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-01">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div >
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-02">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+            
+            <div class="flex-column center_a content_side">
+                <div class="side-boxes-content-road"></div>
+                <div class="side-boxes-content-road"></div>
             </div>
         </div>
+        
     </div>
 
-    {% include "../partials/footer.html" %}
+<!-- Adicione este script no final do corpo do seu HTML -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sectionRoad = document.querySelector('.section-road');
+        let isScrolling = false;
+        let canScrollSectionRoad = false;
+        window.addEventListener('scroll', function () {
+            // Verifica se a página foi rolada até o final
+            const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+        
+            if (isAtBottom) {
+                console.log('Você está no final da página!');
+                canScrollSectionRoad = true;
+                // Faça algo quando estiver no final da página
+            }
+        });
+
+        document.addEventListener('wheel', function (event) {
+            // Verifica se o evento ocorreu dentro da .section-road ou em um de seus descendentes
+            const isScrollingInSectionRoad = sectionRoad.contains(event.target);
+            
+            if (!isScrollingInSectionRoad && canScrollSectionRoad) {
+                //smooth
+                if (!isScrolling) {
+                    isScrolling = true;
+
+                    const newScrollTop = sectionRoad.scrollTop + event.deltaY*2.5 ;
+                    
+                    sectionRoad.scrollTo({
+                        top: newScrollTop,
+                        behavior: 'smooth'
+                    });
+
+                    setTimeout(function () {
+                        isScrolling = false;
+                    }, 125)
+                }
+            }
+        }, { passive: false });
+    });
+
+</script>
+
+    
 
 </body>
 
