@@ -83,24 +83,29 @@
         window.addEventListener('scroll', function () {
             // Verifica se a página foi rolada até o final
             const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
-        
-            if (isAtBottom) {
-                console.log('Você está no final da página!');
+            const isAtTop = window.scrollY === 0;
+
+            if (isAtBottom || isAtTop) {
+                console.log('Você está no final/topo da página!');
                 canScrollSectionRoad = true;
                 // Faça algo quando estiver no final da página
             }
+            else{
+                canScrollSectionRoad = false;
+
+                }
         });
 
         document.addEventListener('wheel', function (event) {
             // Verifica se o evento ocorreu dentro da .section-road ou em um de seus descendentes
             const isScrollingInSectionRoad = sectionRoad.contains(event.target);
             
-            if (!isScrollingInSectionRoad && canScrollSectionRoad) {
+            if (!isScrollingInSectionRoad && canScrollSectionRoad  )  {
                 //smooth
                 if (!isScrolling) {
                     isScrolling = true;
 
-                    const newScrollTop = sectionRoad.scrollTop + event.deltaY*2.5 ;
+                    const newScrollTop = sectionRoad.scrollTop + event.deltaY*1.4 ;
                     
                     sectionRoad.scrollTo({
                         top: newScrollTop,
@@ -109,7 +114,7 @@
 
                     setTimeout(function () {
                         isScrolling = false;
-                    }, 125)
+                    }, 50)
                 }
             }
         }, { passive: false });
