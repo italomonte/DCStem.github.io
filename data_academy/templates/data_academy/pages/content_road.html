@@ -9,30 +9,46 @@
 
     <div class="content_road-container">
         <div class="grid-3">
-            <div class="flex-column center_a content-side">
-                <div class="content-side-inner">
-                    <div class="side-boxes-content-road">
-                        <h3>Ranking</h3>
-                        <h4>1 - Camila Moi</h4>
-                        <h4>2 - Gabriel Cortez</h4>
-                        <h4>3 - Ítalo Monte</h4>
-                        <h4>4 - Mari</h4>
-                        <h4>5 - Ademir</h4>
-                        <h4>5 - Felicien</h4>
-                    </div>
-                    <div class="side-boxes-content-road">
-                        <h3>Ranking</h3>
-                        <h4>1 - Camila Moi</h4>
-                        <h4>2 - Gabriel Cortez</h4>
-                        <h4>3 - Ítalo Monte</h4>
-                        <h4>4 - Mari</h4>
-                        <h4>5 - Ademir</h4>
-                        <h4>5 - Felicien</h4>
-                    </div>
+            <aside class="flex-column content-left">
+                <div class="profile">
+                    <i class="fa-solid fa-user"></i>
                 </div>
-            </div>
+                <div class="road">
+                    <i class="fa-solid fa-road"></i>
+                </div>
+                <div class="ranking">
+                    <i class="fa-solid fa-ranking-star"></i>
+                </div>
+                <div class="gear">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </aside>
             <div class="section-road">
                 <div class="flex-column center_a ">
+                    <div id="subject-01">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-02">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-01">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div id="subject-02">
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
+                    <div>
+                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                    </div>
                     <div id="subject-01">
                         <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
                     </div>
@@ -96,12 +112,25 @@
                     </div>
                     <div class="side-boxes-content-road">
                         <h3>Ranking</h3>
-                        <h4>1 - Camila Moi</h4>
-                        <h4>2 - Gabriel Cortez</h4>
-                        <h4>3 - Ítalo Monte</h4>
-                        <h4>4 - Mari</h4>
-                        <h4>5 - Ademir</h4>
-                        <h4>5 - Felicien</h4>
+                        <h4>1 - Sofia Oliveira</h4>
+                        <h4>2 - Lucas Santos</h4>
+                        <h4>3 - Isabella Silva</h4>
+                        <h4>4 - Guilherme Costa</h4>
+                        <h4>5 - Mateus Pereira</h4>
+                        <h4>6 - Valentina Souza</h4>
+                        <h4>7 - Isabella Lima</h4>
+                        <h4>8 - Eduardo Silva</h4>
+                        <h4>9 - Ana Souza</h4>
+                        <h4>10 - Lucas Pereira</h4>
+                    </div>
+                    <div class="side-boxes-content-road">
+                        <h3>Acesse Nossas Mídias Sociais</h3>
+                        <div class="midia-box">
+                            <img class="midia-logo" src="../../../static/data_academy/imgs/insta-logo.png" alt="">
+                            <img class="midia-logo" src="../../../static/data_academy/imgs/x-logo.png" alt="">
+                            <img class="midia-logo" src="../../../static/data_academy/imgs/youtube-logo.png" alt="">
+                        </div>
+
                     </div>
 
                 </div>
@@ -143,7 +172,7 @@
                     if (!isScrolling) {
                         isScrolling = true;
 
-                        const newScrollTop = sectionRoad.scrollTop + event.deltaY * 1.4;
+                        const newScrollTop = sectionRoad.scrollTop + (event.deltaY) * 1.5;
 
                         sectionRoad.scrollTo({
                             top: newScrollTop,
@@ -152,27 +181,26 @@
 
                         setTimeout(function () {
                             isScrolling = false;
-                        }, 100)
+                        }, 80)
                     }
                 }
             }, { passive: false });
 
             // Configuração inicial da max-height da section-road com base na altura da maior content-side-inner
-            let maxContentSideInnerHeight = 0;
+            let maxContentSideInnerHeight = 40;
             contentSideInners.forEach(contentSideInner => {
-                maxContentSideInnerHeight = Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
+                maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
             });
             sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
 
             // Reajusta a max-height da section-road quando a janela é redimensionada
             window.addEventListener('resize', function () {
-                maxContentSideInnerHeight = 0;
+                maxContentSideInnerHeight = 40;
                 contentSideInners.forEach(contentSideInner => {
-                    maxContentSideInnerHeight = Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
+                    maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
                 });
                 sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
             });
-
         });
 
     </script>

@@ -1,19 +1,30 @@
 .content_road-container{
     margin: 0 auto;
-    padding-left: var(--spacing-gutter-medium);
-    padding-right: var(--spacing-gutter-medium);
+    padding-left: 0;
+    padding-right: 3;
     padding-top:0;
+    padding-bottom:0;
     max-width: 144rem;
     box-sizing: border-box;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    ;
+
+    
 }
 
 .grid-3{
     display: grid;
-    grid-template-columns: 0.8fr 1fr 0.8fr;
-    
+    grid-template-columns: 0.15fr 1fr 0.6fr;
+}
+
+.content-left{
+    border-right: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: baseline;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 4rem;
+
 }
 
 .content-side{
@@ -42,7 +53,12 @@
 
 .side-boxes-content-road h3{
     text-align: center;
-    font-weight: 700;    
+    font-weight: 700;   
+    margin-bottom: 1rem; 
+}
+
+.side-boxes-content-road h4{
+    margin-left: 2rem;  
 }
 
 .section-road{
