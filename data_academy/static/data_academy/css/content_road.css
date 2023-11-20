@@ -16,26 +16,31 @@
     
 }
 
-.content_side{
+.content-side{
     padding: 2rem;
+    width: 100%;
+}
+
+.content-side-inner{
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    justify-content: baseline;
     align-items: center;
-    max-height: 40rem;
+    justify-content: baseline;
+    width: 100%;
+    max-height: fit-content;
 }
+
 
 .side-boxes-content-road{
     border: 1px solid gray;
     border-radius: 4rem;
     width: 100%;
-    height: 50%;
+    max-height: fit-content;
     padding: 2rem;
 }
 
 .section-road{
-    max-height: 100vh;
     overflow-y: auto;
     transition: scroll-behavior 0.05s ease-in-out;
 }

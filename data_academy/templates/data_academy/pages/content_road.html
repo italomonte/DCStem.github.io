@@ -9,9 +9,27 @@
 
     <div class="content_road-container">
         <div class="grid-3">
-            <div class="flex-column center_a content_side">
-                <div class="side-boxes-content-road"></div>
-                <div class="side-boxes-content-road"></div>
+            <div class="flex-column center_a content-side">
+                <div class="content-side-inner">
+                    <div class="side-boxes-content-road">
+                        <h3>Ranking</h3>
+                        <h3>1 - Camila Moi</h3>
+                        <h3>2 - Gabriel Cortez</h3>
+                        <h3>3 - Ítalo Monte</h3>
+                        <h3>4 - Mari</h3>
+                        <h3>5 - Ademir</h3>
+                        <h3>5 - Felicien</h3>
+                    </div>
+                    <div class="side-boxes-content-road">
+                        <h3>Ranking</h3>
+                        <h3>1 - Camila Moi</h3>
+                        <h3>2 - Gabriel Cortez</h3>
+                        <h3>3 - Ítalo Monte</h3>
+                        <h3>4 - Mari</h3>
+                        <h3>5 - Ademir</h3>
+                        <h3>5 - Felicien</h3>
+                    </div>
+                </div>
             </div>
             <div class="section-road">
                 <div class="flex-column center_a ">
@@ -65,10 +83,37 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="flex-column center_a content_side">
-                <div class="side-boxes-content-road"></div>
-                <div class="side-boxes-content-road"></div>
+            <div class="flex-column center_a content-side">
+                <div class="content-side-inner">
+                    <div class="side-boxes-content-road">
+                        <h3>Ranking</h3>
+                        <h3>1 - Camila Moi</h3>
+                        <h3>2 - Gabriel Cortez</h3>
+                        <h3>3 - Ítalo Monte</h3>
+                        <h3>4 - Mari</h3>
+                        <h3>5 - Ademir</h3>
+                        <h3>5 - Felicien</h3>
+                    </div>
+                    <div class="side-boxes-content-road">
+                        <h3>Ranking</h3>
+                        <h3>1 - Camila Moi</h3>
+                        <h3>2 - Gabriel Cortez</h3>
+                        <h3>3 - Ítalo Monte</h3>
+                        <h3>4 - Mari</h3>
+                        <h3>5 - Ademir</h3>
+                        <h3>5 - Felicien</h3>
+                    </div>
+                    <div class="side-boxes-content-road">
+                        <h3>Ranking</h3>
+                        <h3>1 - Camila Moi</h3>
+                        <h3>2 - Gabriel Cortez</h3>
+                        <h3>3 - Ítalo Monte</h3>
+                        <h3>4 - Mari</h3>
+                        <h3>5 - Ademir</h3>
+                        <h3>5 - Felicien</h3>
+                    </div>
+                    
+                </div>
             </div>
         </div>
         
@@ -78,8 +123,10 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const sectionRoad = document.querySelector('.section-road');
+        const contentSideInners = document.querySelectorAll('.content-side-inner');
         let isScrolling = false;
         let canScrollSectionRoad = false;
+
         window.addEventListener('scroll', function () {
             // Verifica se a página foi rolada até o final
             const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
@@ -114,10 +161,27 @@
 
                     setTimeout(function () {
                         isScrolling = false;
-                    }, 110)
+                    }, 100)
                 }
             }
         }, { passive: false });
+
+        // Configuração inicial da max-height da section-road com base na altura da maior content-side-inner
+        let maxContentSideInnerHeight = 0;
+        contentSideInners.forEach(contentSideInner => {
+            maxContentSideInnerHeight = Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
+        });
+        sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
+
+        // Reajusta a max-height da section-road quando a janela é redimensionada
+        window.addEventListener('resize', function () {
+            maxContentSideInnerHeight = 0;
+            contentSideInners.forEach(contentSideInner => {
+                maxContentSideInnerHeight = Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
+            });
+            sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
+        });
+
     });
 
 </script>
