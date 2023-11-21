@@ -1,30 +1,17 @@
 .content_road-container{
     margin: 0 auto;
     padding-left: 0;
-    padding-right: 3;
+    padding-right: 6rem;
     padding-top:0;
     padding-bottom:0;
     max-width: 144rem;
     box-sizing: border-box;
-
-    
 }
 
 .grid-3{
     display: grid;
-    grid-template-columns: 0.15fr 1fr 0.6fr;
-}
-
-.content-left{
-    border-right: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    justify-content: baseline;
-    align-items: center;
-    padding: 1rem;
-    padding-top: 4rem;
-
+    grid-template-columns:1fr 0.6fr;
+    padding-bottom: 2rem;
 }
 
 .content-side{
@@ -61,15 +48,83 @@
     margin-left: 2rem;  
 }
 
+
+
+.select-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.select-area h2{
+    font-size: 2rem;
+}
+
+.dropdown {
+    width: 200px;
+    margin: 20px;
+}
+
+/* Estilo para o menu suspenso */
+.dropdown select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para as opções do dropdown */
+.dropdown select option {
+    font-size: 16px;
+}
+
 .section-road{
     overflow-y: auto;
     transition: scroll-behavior 0.05s ease-in-out;
+}
+
+.section-road a{
+    width: 80%;
+    height: 10rem;
+    margin-top: 2rem;
+
 }
 
 
 .section-road::-webkit-scrollbar {
     width: 0.5em;
 }
+
+.subject-box{
+    font-family: var(--font-headings);
+    background-color: var(--main-color-1);
+    border-radius: 2rem;
+    border-bottom: 10px solid var(--main-color-6);
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    padding-left: 3rem;
+}
+
+.subject-box h1{
+    font-size: 3rem;
+    color: white;
+}
+
+.subject-box h2{
+    font-size: 2rem;
+    color: white;
+}
+
+.subject-box:hover{
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
 
 #subject-01{
     margin-right: 14rem;

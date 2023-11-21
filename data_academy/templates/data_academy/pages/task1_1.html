@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "../partials/head.html" %}
+
+<body>
+    {% include "../partials/header.html" %}
+
+    <section class="section">
+        <div  id="title" class="container main-content content">
+            <h1>Estatística Descritiva</h1>
+
+            <div class="slider">
+                <div class="slide" id="slide1">
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Aviso</h2>
+
+                    <div class="box-style">
+                        <h2>Pera aí! Como esse é o primeiro assunto do site, queremos te explicar uma coisinha!<br><br></h2>
+                        <h2>Caso ainda não saiba aqui nesse ambiente utilizamos uma técinica diferente pra ensinar, a
+                            ABP.<br><br></h2>
+                        <h2> ABP se destaca por ser uma abordagem educacional que coloca os alunos no centro do processo
+                            de ensino-aprendizagem, incentivando-os a desenvolver habilidades para resolução de
+                            problemas, pensamento crítico e colaboração. Esse método tem como característica instigar o
+                            estudante a pensar criticamente por si próprio, buscando novas fontes de conhecimento para
+                            resolver os desafios do mundo real. Promovendo uma compreensão mais profunda dos conceitos e
+                            uma aplicação prática do conhecimento. <br>
+                        </h2>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <button class="next_previous_button" id="previousSlideButton">
+                    <a><h2>Anterior</h2></a>
+                </button>
+                <button class="next_previous_button"  id="nextSlideButton">
+                    <a><h2>Próximo</h2></a>
+                </button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+    <script src="{% static "data_academy/js/main.js" %}"></script>
+
+</body>
+
+<script src="{% static "data_academy/js/script.js" %}"></script>
+
+
+</html>

@@ -21,6 +21,21 @@ def content_road(request):
 def login (request):
     return render(request, 'data_academy/pages/login.html')
 
+def task1_1 (request):
+    return render(request, 'data_academy/pages/task1_1.html')
+
+def task1_2 (request):
+    return render(request, 'data_academy/pages/task1_2.html')
+
+def task1_3 (request):
+    return render(request, 'data_academy/pages/task1_3.html')
+
+def task1_4 (request):
+    return render(request, 'data_academy/pages/task1_4.html')
+
+def task1_5 (request):
+    return render(request, 'data_academy/pages/task1_5.html')
+
 
 def task(request):
 

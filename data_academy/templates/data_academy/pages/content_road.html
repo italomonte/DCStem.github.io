@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +9,8 @@
     {% include "../partials/header.html" %}
 
     <div class="content_road-container">
-        <div class="grid-3">
-            <aside class="flex-column content-left">
+    
+        <!--<div class="content-left">
                 <div class="profile">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -22,80 +23,56 @@
                 <div class="gear">
                     <i class="fa-solid fa-gear"></i>
                 </div>
-            </aside>
-            <div class="section-road">
-                <div class="flex-column center_a ">
-                    <div id="subject-01">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                
+        </div>-->
+        
+        <div class="grid-3">   
+            <div>
+                <div class="select-area">
+                    <h2> Escolha sua área de atuação: </h2>
+                    <div class="dropdown">
+                        <!-- Elemento select representa o dropdown -->
+                        <select>
+                            <!-- Elementos option representam as opções do dropdown -->
+                            <option value="opcao1">Produção</option>
+                            <option value="opcao2">Computação</option>
+                            <option value="opcao3">Mecânica</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
                     </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-02">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-01">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-02">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-01">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-02">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-01">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-02">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-01">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-02">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-01">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div id="subject-02">
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
-                    </div>
-                    <div>
-                        <img src="../../../static/data_academy/imgs/button-deactivate.png" alt="button-deactivate">
+                </div>
+                <div class="section-road">
+                    <div class="flex-column center_a">
+                        <a href="{% url "data_academy:task1_1" %}">
+                            <div class="subject-box">
+                                <h1>Metodologia</h1>
+                                <h2>O que é Aprendizagem Baseada em Problemas?</h2>
+                            </div>
+                        </a>
+                        <a href="{% url "data_academy:task1_2" %}">
+                            <div class="subject-box">
+                                <h1>Introdução</h1>
+                                <h2>Entenda o contexto da atividade</h2>
+                            </div>
+                        </a>
+                        <a href="{% url "data_academy:task1_3" %}">
+                            <div class="subject-box">
+                                <h1>Amostragem</h1>
+                                <h2>Colete os dados para a análise</h2>
+                            </div>
+                        </a>
+                        <a href="{% url "data_academy:task1_4" %}">
+                            <div class="subject-box">
+                                <h1>Revisão</h1>
+                                <h2>Dê uma olhada nos conceitos teóricos</h2>
+                            </div>
+                        </a>
+                        <a href="{% url "data_academy:task1_5" %}">
+                            <div class="subject-box">
+                                <h1>Análise</h1>
+                                <h2>Investigue o problema usando programação</h2>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -123,87 +100,78 @@
                         <h4>9 - Ana Souza</h4>
                         <h4>10 - Lucas Pereira</h4>
                     </div>
-                    <div class="side-boxes-content-road">
-                        <h3>Acesse Nossas Mídias Sociais</h3>
-                        <div class="midia-box">
-                            <img class="midia-logo" src="../../../static/data_academy/imgs/insta-logo.png" alt="">
-                            <img class="midia-logo" src="../../../static/data_academy/imgs/x-logo.png" alt="">
-                            <img class="midia-logo" src="../../../static/data_academy/imgs/youtube-logo.png" alt="">
-                        </div>
 
-                    </div>
 
                 </div>
             </div>
+
         </div>
 
-    </div>
+        <!-- Adicione este script no final do corpo do seu HTML -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const sectionRoad = document.querySelector('.section-road');
+                const contentSideInners = document.querySelectorAll('.content-side-inner');
+                let isScrolling = false;
+                let canScrollSectionRoad = false;
 
-    <!-- Adicione este script no final do corpo do seu HTML -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sectionRoad = document.querySelector('.section-road');
-            const contentSideInners = document.querySelectorAll('.content-side-inner');
-            let isScrolling = false;
-            let canScrollSectionRoad = false;
+                window.addEventListener('scroll', function () {
+                    // Verifica se a página foi rolada até o final
+                    const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+                    const isAtTop = window.scrollY === 0;
 
-            window.addEventListener('scroll', function () {
-                // Verifica se a página foi rolada até o final
-                const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
-                const isAtTop = window.scrollY === 0;
-
-                if (isAtBottom || isAtTop) {
-                    console.log('Você está no final/topo da página!');
-                    canScrollSectionRoad = true;
-                    // Faça algo quando estiver no final da página
-                }
-                else {
-                    canScrollSectionRoad = false;
-
-                }
-            });
-
-            document.addEventListener('wheel', function (event) {
-                // Verifica se o evento ocorreu dentro da .section-road ou em um de seus descendentes
-                const isScrollingInSectionRoad = sectionRoad.contains(event.target);
-
-                if (!isScrollingInSectionRoad && canScrollSectionRoad) {
-                    //smooth
-                    if (!isScrolling) {
-                        isScrolling = true;
-
-                        const newScrollTop = sectionRoad.scrollTop + (event.deltaY) * 1.5;
-
-                        sectionRoad.scrollTo({
-                            top: newScrollTop,
-                            behavior: 'smooth'
-                        });
-
-                        setTimeout(function () {
-                            isScrolling = false;
-                        }, 80)
+                    if (isAtBottom || isAtTop) {
+                        console.log('Você está no final/topo da página!');
+                        canScrollSectionRoad = true;
+                        // Faça algo quando estiver no final da página
                     }
-                }
-            }, { passive: false });
+                    else {
+                        canScrollSectionRoad = false;
 
-            // Configuração inicial da max-height da section-road com base na altura da maior content-side-inner
-            let maxContentSideInnerHeight = 40;
-            contentSideInners.forEach(contentSideInner => {
-                maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
-            });
-            sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
+                    }
+                });
 
-            // Reajusta a max-height da section-road quando a janela é redimensionada
-            window.addEventListener('resize', function () {
-                maxContentSideInnerHeight = 40;
+                document.addEventListener('wheel', function (event) {
+                    // Verifica se o evento ocorreu dentro da .section-road ou em um de seus descendentes
+                    const isScrollingInSectionRoad = sectionRoad.contains(event.target);
+
+                    if (!isScrollingInSectionRoad && canScrollSectionRoad) {
+                        //smooth
+                        if (!isScrolling) {
+                            isScrolling = true;
+
+                            const newScrollTop = sectionRoad.scrollTop + (event.deltaY) * 1.5;
+
+                            sectionRoad.scrollTo({
+                                top: newScrollTop,
+                                behavior: 'smooth'
+                            });
+
+                            setTimeout(function () {
+                                isScrolling = false;
+                            }, 80)
+                        }
+                    }
+                }, { passive: false });
+
+                // Configuração inicial da max-height da section-road com base na altura da maior content-side-inner
+                let maxContentSideInnerHeight = 40;
                 contentSideInners.forEach(contentSideInner => {
                     maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
                 });
                 sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
-            });
-        });
 
-    </script>
+                // Reajusta a max-height da section-road quando a janela é redimensionada
+                window.addEventListener('resize', function () {
+                    maxContentSideInnerHeight = 40;
+                    contentSideInners.forEach(contentSideInner => {
+                        maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
+                    });
+                    sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
+                });
+            });
+
+        </script>
 
 
 
