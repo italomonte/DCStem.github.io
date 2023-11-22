@@ -18,8 +18,11 @@ O Data Academy é uma plataforma educacional que utiliza Python como ferramenta 
 
 ## Imagens do Projeto
 
-![image](https://github.com/italomonte/Data_Academy/assets/68883489/440b13d5-34f6-47ac-83a0-fe57437007da)
+![image](https://github.com/italomonte/Data_Academy/assets/68883489/f7736004-7aba-4575-b58b-5affebb8fc2a)
+![image](https://github.com/italomonte/Data_Academy/assets/68883489/89b64342-f903-404e-8ce8-b99774914bdb)
 
+##Acesse o site:
+http://italomonte.pythonanywhere.com/
 
 ## Como Baixar o Projeto
 
