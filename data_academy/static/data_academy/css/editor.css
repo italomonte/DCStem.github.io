@@ -20,10 +20,9 @@
 }
 
 .box-style{
-  margin: 0 auto;
   border-radius: 4rem;
   border: .2rem  solid var(--color-primary);
-  width: 90%;
+  width: 100%;
   padding: 2rem;
   height: auto;
   box-sizing: border-box;
