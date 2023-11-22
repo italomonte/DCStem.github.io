@@ -21,7 +21,6 @@ let currentSlide = 0;
                 buttonNext.style.display = 'inline-block'
                 slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-
             else if (i === index) {
                 slide.style.display = 'inline-block';
                 buttonBackMenur.style.display = 'none'

@@ -28,6 +28,7 @@ def task1_2 (request):
     return render(request, 'data_academy/pages/task1_2.html')
 
 def task1_3 (request):
+    
     #df = pd.read_csv("/home/italomonte/Data_Academy/data_academy/static/data_academy/csv/BD_Refrigerante.csv")
     df = pd.read_csv("data_academy/static/data_academy/csv/BD_Refrigerante.csv")
     html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
