@@ -5,6 +5,7 @@ app_name = 'data_academy'
 
 urlpatterns = [
     path('', views.home, name="home"),
+    path('content/', views.content, name="content"),
     path('content_road/', views.content_road, name="content_road"),
     path('login/', views.login, name="login"),
     path('task1_1/', views.task1_1, name="task1_1"),
