@@ -15,23 +15,38 @@
             <div class="title-content">
               <h1>O que você quer estudar hoje?</h1>
             </div>
-            <!--button about ABP-->
+            <div class="abp-info-box">
+              <div>
+                <h2>O que é ABP?</h2>
+              </div>
+              <div class="abp-more-info-button">
+                <h2>Saiba Mais</h2>
+              </div>
+            </div>
           </div>
           
           <div class="select-content-box">
             <!--assuntos-->
-            <div class="content-box">
-              <h2>Media, Mediana e Moda</h2>
-            </div>
-            <div class="content-box">
-              <h2>Desvio Padrão e Variância</h2>
-            </div>
-            <div class="content-box">
-              <h2>Distribuições de Probabilidade – Gauss/Normal, Binomial, Poisson</h2>
-            </div>
-            <div class="content-box">
-              <h2> Intervalo de Confiança</h2>
-            </div>
+            <a href="{% url "data_academy:content_road" %}">
+              <div class="content-box">
+                <h2>Media, Mediana e Moda</h2>
+              </div>
+            </a>
+            <a href="{% url "data_academy:content_road" %}">
+              <div class="content-box">
+                <h2>Desvio Padrão e Variância</h2>
+              </div>
+            </a>
+            <a href="{% url "data_academy:content_road" %}">
+              <div class="content-box">
+                <h2>Distribuições de Probabilidade – Gauss/Normal, Binomial, Poisson</h2>
+              </div>
+            </a>
+            <a href="{% url "data_academy:content_road" %}">
+              <div class="content-box">
+                <h2> Intervalo de Confiança</h2>
+              </div>
+            </a>
           </div>
         </div>
       </div>
