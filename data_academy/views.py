@@ -28,16 +28,16 @@ def task1_2 (request):
     return render(request, 'data_academy/pages/task1_2.html')
 
 def task1_3 (request):
-    return render(request, 'data_academy/pages/task1_3.html')
+    #df = pd.read_csv("/home/italomonte/Data_Academy/data_academy/static/data_academy/csv/BD_Refrigerante.csv")
+    df = pd.read_csv("data_academy/static/data_academy/csv/BD_Refrigerante.csv")
+    html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
+
+    return render(request, 'data_academy/pages/task1_3.html', {"table": html_table})
 
 def task1_4 (request):
     return render(request, 'data_academy/pages/task1_4.html')
 
-def task1_5 (request):
-    return render(request, 'data_academy/pages/task1_5.html')
-
-
-def task(request):
+def task1_5(request):
 
     if request.method == 'POST':
         code = request.POST.get('code', '')
@@ -60,8 +60,6 @@ def task(request):
         sys.stdout = sys.__stdout__
         responseData = {'code': code, 'output': output.getvalue()}
         return JsonResponse(responseData)
-    #df = pd.read_csv("/home/italomonte/Data_Academy/data_academy/static/data_academy/csv/BD_Refrigerante.csv")
-    df = pd.read_csv("data_academy/static/data_academy/csv/BD_Refrigerante.csv")
-    html_table = df.to_html().replace("<table", '<table id="example" class="table table-striped" style="width:100%"')
+    
 
-    return render(request, 'data_academy/pages/task.html', {"table": html_table})
+    return render(request, 'data_academy/pages/task1_5.html')

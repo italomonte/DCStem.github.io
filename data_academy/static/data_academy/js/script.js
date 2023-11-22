@@ -1,29 +1,63 @@
 
 let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
+    const buttonPrevious = document.getElementById('previousSlideButton')
+    const buttonNext = document.getElementById('nextSlideButton')
+    const buttonBackMenur = document.getElementById('BackMenuButtonr')
+    const buttonBackMenul = document.getElementById('BackMenuButtonl')
+    
+    const slideLength = slides.length 
+
+    buttonBackMenur.style.display = 'none';
+    buttonBackMenul.style.display = 'none';
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            if (i === index) {
+            if (i === index ) {
                 slide.style.display = 'inline-block';
+                buttonBackMenur.style.display = 'none'
+                buttonBackMenul.style.display = 'none'
+                buttonPrevious.style.display = 'inline-block'
+                buttonNext.style.display = 'inline-block'
                 slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
+            }
+
+            else if (i === index) {
+                slide.style.display = 'inline-block';
+                buttonBackMenur.style.display = 'none'
+                buttonBackMenul.style.display = 'none'
+                buttonPrevious.style.display = 'inline-block'
+                buttonNext.style.display = 'inline-block'
+                slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            else if (index >= slides.length){
+                buttonPrevious.style.display = 'inline-block'
+                buttonNext.style.display = 'none'
+                buttonBackMenur.style.display = 'inline-block';
+            }
+            else if (index < 0){
+                buttonPrevious.style.display = 'none'
+                buttonNext.style.display = 'none'
+                buttonBackMenul.style.display = 'inline-block';
+                buttonNext.style.display = 'inline-block'
+            }
+            else {
                 slide.style.display = 'none';
             }
         });
     }
     
     function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
+        currentSlide = (currentSlide + 1) ;
 
         showSlide(currentSlide);
-        console.log("foi");
+        console.log("foi, slide: ", currentSlide, slides.length);
     }
     
     function previousSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        currentSlide = (currentSlide - 1 ) ;
         showSlide(currentSlide);
-        console.log("voltou");
+        console.log("voltou, slide: ", currentSlide, slides.length);
     }
     
 
