@@ -11,7 +11,6 @@
 .grid-3{
     display: grid;
     grid-template-columns:1fr 0.6fr;
-    padding-bottom: 2rem;
 }
 
 .content-side{
@@ -28,27 +27,6 @@
     width: 100%;
     max-height: fit-content;
 }
-
-
-.side-boxes-content-road{
-    border: 1px solid gray;
-    border-radius: 4rem;
-    width: 100%;
-    max-height: fit-content;
-    padding: 2rem;
-}
-
-.side-boxes-content-road h3{
-    text-align: center;
-    font-weight: 700;   
-    margin-bottom: 1rem; 
-}
-
-.side-boxes-content-road h4{
-    margin-left: 2rem;  
-}
-
-
 
 .select-area{
     display: flex;
@@ -100,7 +78,7 @@
 }
 
 .subject-box{
-    font-family: var(--font-headings);
+    font-family: var(--font-secondary);
     background-color: var(--main-color-1);
     border-radius: 2rem;
     border-bottom: 10px solid var(--main-color-6);
@@ -110,12 +88,15 @@
     padding-left: 3rem;
 }
 
+
 .subject-box h1{
+    font-weight: 400;
     font-size: 3rem;
     color: white;
 }
 
 .subject-box h2{
+    font-weight: 300;
     font-size: 2rem;
     color: white;
 }
@@ -144,4 +125,38 @@
 .midia-logo{
     max-width: 5rem;
     max-height: 5rem;
+}
+
+
+
+.side-boxes-content-road{
+    border: 2px solid var(--main-color-1);
+    border-radius: 4rem;
+    width: 100%;
+    max-height: fit-content;
+    padding: 2rem;
+}
+
+.side-boxes-content-road h3{
+    font-family: var(--font-secondary);
+    text-align: center;
+    font-weight: 500;   
+    margin-bottom: 1rem; 
+}
+
+.button-python{
+    background-color: var(--main-color-3);
+    border-radius: 9.3rem;
+    max-width: fit-content;
+    padding: 1rem;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, .2);
+    color: var(--color-white);
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.button-python h2{
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 500;
 }
