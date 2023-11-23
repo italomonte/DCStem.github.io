@@ -8,17 +8,17 @@
 
 .abp-info-box{
     background-color: var(--main-color-1);
-    width: 35%;
-    height: 7rem;
+    width: 50%;
+    height: fit-content;
     border-radius: 8rem;
     display: flex;
     padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     justify-content: space-around;
     align-items: center;
     color: white;
     border: 1px solid black;
-
-
 }
 
 .abp-more-info-button{
@@ -49,6 +49,25 @@
 .title-content h1{
     font-family: var(--font-secondary);
     font-weight: 500;
+
+}
+
+@media only screen and (max-width: 800px){
+    .title-box-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 3rem;
+    }
+
+    .abp-info-box{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .abp-more-info-button{
+    }
 
 }
 
