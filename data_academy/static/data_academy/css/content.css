@@ -12,7 +12,7 @@
 }
 
 .title-content{
-    padding-left: 8rem;
+    padding-left: 6rem;
     text-align: left;
 }
 
@@ -45,25 +45,26 @@
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
 }
 
 .abp-info-text h1{
     color: var(--main-color-1);
     font-family: var(font-headings);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-bottom: 3rem;
 }
 
+
 .abp-info-text h2{
     color: #0C0C0C;
     text-align: justify;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: var(font-headings);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -77,6 +78,7 @@
     text-align: center;
     width: 90%;
     margin: 0 auto;    
+    cursor: pointer;
 }
 
 .abp-info-button h1{
@@ -84,25 +86,26 @@
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: var(--font-headings);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
 .select-content-box{
+    margin-left: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
     flex-wrap: wrap;
     row-gap: 4rem;
     column-gap: 6rem;
     height: fit-content;
 }
 .select-content-box a {
-    width: 40%;
-    height: 140px;
+    width: 35%;
+    height: 120px;
     cursor: pointer;
     margin-top: 2rem;
 }
@@ -114,14 +117,14 @@
     border: 7px solid #0CBC8B;
     background: rgba(137, 218, 185, 0.45);
     box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.25);
-    padding: 2.5rem;
+    padding: 2rem;
 }
 
 .content-box h2{
     color: #0C0C0C;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: var(--font-headings);
-    font-size: 28px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

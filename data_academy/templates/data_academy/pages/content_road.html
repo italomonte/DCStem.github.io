@@ -62,23 +62,6 @@
                                 <h2>Dê uma olhada nos conceitos teóricos</h2>
                             </div>
                         </a>
-                        <a href="{% url "data_academy:task1_4" %}">
-                            <div class="subject-box">
-                                <h1>Revisão</h1>
-                                <h2>Dê uma olhada nos conceitos teóricos</h2>
-                            </div>
-                        </a>
-                        <a href="{% url "data_academy:task1_4" %}">
-                            <div class="subject-box">
-                                <h1>Revisão</h1>
-                                <h2>Dê uma olhada nos conceitos teóricos</h2>
-                            </div>
-                        </a>
-                        <a href="{% url "data_academy:task1_4" %}">
-                            <div class="subject-box">
-                                <h1>Revisão</h1>
-                                <h2>Dê uma olhada nos conceitos teóricos</h2>
-                            </div>
                         </a>
                         <a href="{% url "data_academy:task1_5" %}">
                             <div class="subject-box">
@@ -90,35 +73,17 @@
                 </div>
             </div>
             
-            <div class="flex-column center_a content-side">
-                <div class="content-side-inner">
-                    
-                    <div class="side-boxes-content-road">
-                        <h3>Aprenda Python</h3>
-                        <div class="button-python">
-                            <h2>Quero Aprender</h2>
-                        </div>
-                    </div>
-                    <div class="side-boxes-content-road">
-                        <h3>Acesse Nossas Mídias Sociais</h3>
-                        <div class="midia-box">
-                            <img class="midia-logo" src="../../../static/data_academy/imgs/insta-logo.png" alt="">
-                            <img class="midia-logo" src="../../../static/data_academy/imgs/x-logo.png" alt="">
-                            <img class="midia-logo" src="../../../static/data_academy/imgs/youtube-logo.png" alt="">
-                        </div>
-
-                    </div>
-                    <div class="side-boxes-content-road">
-                        <h3>Aprenda MySQL</h3>
-                        <div class="button-python">
-                            <h2>Quero Aprender</h2>
-                        </div>
-                    </div>
-                    
-
-
+            <div class="others-curses-box">
+                <div class="others-curses-text">
+                   <h1>Você também pode se interessar em...</h1>
                 </div>
-            </div>
+                <div class="others-curses-button">
+                   <h1>Python</h1>
+                </div>
+                <div class="others-curses-button">
+                    <h1>MySQL</h1>
+                </div>
+              </div>
 
         </div>
 
@@ -169,21 +134,7 @@
                     }
                 }, { passive: false });
 
-                // Configuração inicial da max-height da section-road com base na altura da maior content-side-inner
-                let maxContentSideInnerHeight = 40;
-                contentSideInners.forEach(contentSideInner => {
-                    maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
-                });
-                sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
-
-                // Reajusta a max-height da section-road quando a janela é redimensionada
-                window.addEventListener('resize', function () {
-                    maxContentSideInnerHeight = 40;
-                    contentSideInners.forEach(contentSideInner => {
-                        maxContentSideInnerHeight += Math.max(maxContentSideInnerHeight, contentSideInner.offsetHeight);
-                    });
-                    sectionRoad.style.maxHeight = maxContentSideInnerHeight + 'px';
-                });
+               
             });
 
         </script>

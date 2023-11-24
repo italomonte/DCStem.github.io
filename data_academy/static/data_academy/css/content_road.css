@@ -9,23 +9,7 @@
     padding: 2rem;
     display: grid;
     grid-template-columns:1fr 0.6fr;
-}
-
-.content-side{
-    margin: 0 auto;
-    padding: 2rem;
-    padding-left: 0;
-    width: 80%;
-}
-
-.content-side-inner{
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: baseline;
-    width: 100%;
-    max-height: fit-content;
+    gap: 5rem;
 }
 
 .select-area{
@@ -61,15 +45,14 @@
 }
 
 .section-road{
-    overflow-y: auto;
-    transition: scroll-behavior 0.05s ease-in-out;
+    margin: 0 auto;
+    
 }
 
 .section-road a{
     width: 80%;
     height: 10rem;
     margin-top: 2rem;
-
 }
 
 
@@ -78,27 +61,35 @@
 }
 
 .subject-box{
-    font-family: var(--font-secondary);
-    background-color: var(--main-color-1);
-    border-radius: 2rem;
-    border-bottom: 10px solid var(--main-color-6);
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    font-family: var(--font-headings);
     height: 10rem;
     padding: 1rem;
-    padding-left: 3rem;
+    width: 100%;
+    border-radius: 3rem;
+    border: 7px solid #0CBC8B;
+    background: rgba(137, 218, 185, 0.45);
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
 }
 
 
 .subject-box h1{
-    font-weight: 400;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     font-size: 3rem;
-    color: white;
+    color: black;
 }
 
 .subject-box h2{
     font-weight: 300;
     font-size: 2rem;
-    color: white;
+    color: black;
+
 }
 
 .subject-box:hover{
@@ -106,19 +97,54 @@
     cursor: pointer;
 }
 
-.midia-box{
-    padding: 1rem;
+.others-curses-box{
+    margin: 0 auto;
+    margin-top: 10rem;
+    background-color: var(--main-color-7);
+    width: 90%;
+    height: fit-content;
+    border: 0.7rem solid var(--main-color-3);
+    border-radius: 6.9rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.midia-logo{
-    max-width: 5rem;
-    max-height: 5rem;
+.others-curses-text h1{
+    color: #0C0C0C;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 3rem;
 }
 
+.others-curses-button{
+    border: 0.7rem solid var(--main-color-3);
+    border-radius: 9.3rem;
+    background-color: var(--main-color-3);
+    text-align: center;
+    width: 80%;
+    margin: 0 auto; 
+    cursor: pointer;
+}
 
+.others-curses-button h1{
+    color: var(--white-color);
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: var(--font-headings);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 
 .side-boxes-content-road{
     border: 2px solid var(--main-color-1);
@@ -159,7 +185,7 @@
     }
 
     .section-road {
-        max-weight: fit-content;
+        max-width: fit-content;
     }
 
     .content-side{

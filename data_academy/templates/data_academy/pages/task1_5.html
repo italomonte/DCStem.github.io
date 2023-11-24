@@ -28,8 +28,21 @@
 
                             <button style="margin:0 auto;" type="submit">Executar</button>
 
-                            <div id="editora" class="editora">desc_stats = df[['pH', 'Volume (ml)']].describe()
-print(desc_stats)</div>
+                            <div id="editora" class="editora">import statistics as st
+
+# Dados fictícios para pH, teor de CO2 e volume de refrigerante em cada garrafa para três linhas de produção
+ph = [3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2]
+co2 = [1.2, 1.5, 1.6, 1.8, 1.8, 2.1, 2.3, 2.3]
+volume = [250, 260, 270, 280, 290, 300, 310, 320]
+
+# Tamanho da amostra do volume de refrigerante):
+print("n =", len(volume))
+
+# Medidas de posição para volume de refrigerante
+print("Média de Volume =", st.mean(volume))
+print("Mediana de Volume =", st.median(volume))
+print("Moda do Volume =", st.mode(volume))
+                                </div>
 
                         </form>
 
