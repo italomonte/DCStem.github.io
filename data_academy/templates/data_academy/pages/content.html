@@ -8,48 +8,59 @@
   {% include "../partials/header.html" %}
 
   <main>
-    <div class="container">
-      <div class="main-content">
+    <div class="container content-page-container">
         <div class="flex-column gap-2">
           <div class="title-box-content">
             <div class="title-content">
               <h1>O que você quer estudar hoje?</h1>
             </div>
+          </div>
+          <div class="grid-content">
+            <div class="select-content-box">
+              <!--assuntos-->
+              <a href="{% url "data_academy:content_road" %}">
+                <div class="content-box">
+                  <h2>Média, Mediana e Moda</h2>
+                </div>
+              </a>
+              <a href="{% url "data_academy:content_road" %}">
+                <div class="content-box">
+                  <h2>Desvio Padrão e Variância</h2>
+                </div>
+              </a>
+              <a href="{% url "data_academy:content_road" %}">
+                <div class="content-box">
+                  <h2>Distribuições de Probabilidade </h2>
+                </div>
+              </a>
+              <a href="{% url "data_academy:content_road" %}">
+                <div class="content-box">
+                  <h2> Intervalo de Confiança</h2>
+                </div>
+              </a>
+              <a href="{% url "data_academy:content_road" %}">
+                <div class="content-box">
+                  <h2>Teorema de Bayes</h2>
+                </div>
+              </a>
+              <a href="{% url "data_academy:content_road" %}">
+                <div class="content-box">
+                  <h2>Correlação e regressão</h2>
+                </div>
+              </a>
+            </div>
             <div class="abp-info-box">
-              <div>
-                <h2>O que é ABP?</h2>
+              <div class="abp-info-text">
+                <h1>O que é  Aprendizagem baseada em problemas (ABP)?</h1>
+                <h2>Entenda um pouco sobre a metodologia que utilizamos.</h2>
               </div>
-              <div class="abp-more-info-button">
-                <h2>Saiba Mais</h2>
+              <div class="abp-info-button">
+                <h1>Saiba Mais</h1>
               </div>
             </div>
           </div>
           
-          <div class="select-content-box">
-            <!--assuntos-->
-            <a href="{% url "data_academy:content_road" %}">
-              <div class="content-box">
-                <h2>Media, Mediana e Moda</h2>
-              </div>
-            </a>
-            <a href="{% url "data_academy:content_road" %}">
-              <div class="content-box">
-                <h2>Desvio Padrão e Variância</h2>
-              </div>
-            </a>
-            <a href="{% url "data_academy:content_road" %}">
-              <div class="content-box">
-                <h2>Distribuições de Probabilidade – Gauss/Normal, Binomial, Poisson</h2>
-              </div>
-            </a>
-            <a href="{% url "data_academy:content_road" %}">
-              <div class="content-box">
-                <h2> Intervalo de Confiança</h2>
-              </div>
-            </a>
-          </div>
         </div>
-      </div>
     </div>
   </main>
 

@@ -1,96 +1,134 @@
+.content-page-container{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
 .title-box-content{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: baseline;
     align-items: center;
     gap: 3rem;
 }
 
-.abp-info-box{
-    background-color: var(--main-color-1);
-    width: 50%;
-    height: fit-content;
-    border-radius: 8rem;
-    display: flex;
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    border: 1px solid black;
-}
-
-.abp-more-info-button{
-    cursor: pointer;
-    border-radius: 8rem;
-    background-color: var(--main-color-3);
-    padding: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-
-}
-
-
-.abp-more-info-button h2{
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 0;
-}
-
 .title-content{
+    padding-left: 8rem;
     text-align: left;
 }
 
 
 .title-content h1{
-    font-family: var(--font-secondary);
-    font-weight: 500;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #000000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: var(--font-headings);
 
 }
 
-@media only screen and (max-width: 800px){
-    .title-box-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: baseline;
-        gap: 3rem;
-    }
+.grid-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
 
-    .abp-info-box{
-        width: 100%;
-        height: fit-content;
-    }
+.abp-info-box{
+    background-color: var(--main-color-7);
+    width: 100%;
+    height: fit-content;
+    border: 0.7rem solid var(--main-color-3);
+    border-radius: 6.9rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 4.2rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
 
-    .abp-more-info-button{
-    }
+.abp-info-text h1{
+    color: var(--main-color-1);
+    font-family: var(font-headings);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 3rem;
+}
 
+.abp-info-text h2{
+    color: #0C0C0C;
+    text-align: justify;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: var(font-headings);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -2px;
+}
+
+.abp-info-button{
+    border: 0.7rem solid var(--main-color-3);
+    border-radius: 9.3rem;
+    background-color: var(--main-color-3);
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;    
+}
+
+.abp-info-button h1{
+    color: var(--white-color);
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: var(--font-headings);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .select-content-box{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    row-gap: 4rem;
+    column-gap: 6rem;
+    height: fit-content;
 }
 .select-content-box a {
-    width: 48%;
-    height: 20rem;
+    width: 40%;
+    height: 140px;
     cursor: pointer;
     margin-top: 2rem;
 }
 
 .content-box{
-    color: black;
     width: 100%;
-    height: 20rem;
-    padding: 2rem;
-    border: 2px solid var(--main-color-1);
-    border-bottom: 10px solid var(--main-color-1);
-    border-radius: 0.5rem;
-    background-color: var(--white-color);
+    height: 100%;
+    border-radius: 5rem;
+    border: 7px solid #0CBC8B;
+    background: rgba(137, 218, 185, 0.45);
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.25);
+    padding: 2.5rem;
+}
+
+.content-box h2{
+    color: #0C0C0C;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: var(--font-headings);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+#big-name{
+    font-size: 22px;
+
 }
