@@ -97,6 +97,7 @@
   padding: 1rem;
   text-align: start;
   min-width: 100%;
+  font-size: 4rem;
 }
 
 .gapper{
@@ -175,3 +176,7 @@
   font-size: 2rem;
 }
 
+.media-img {
+  max-width:200px;
+  height: auto;
+}

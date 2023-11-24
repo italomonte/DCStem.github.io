@@ -12,36 +12,57 @@
             <h1>Estatística Descritiva</h1>
 
             <div class="slider">
-]
+
                 <div class="slide" id="slide7">
-                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Compilador</h2>
-                    
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Revisão de Conceitos</h2>
+
                     <div class="box-style">
-                        <h2>Nesta parte você pode fazer os calculos que precisar utilizando python.</h2>
-                        <h2>Esse compilador já está integrado com a base de dados. Pode acessá-la usado "df" </h2>
-                    </div>
-
-                    <div class="compiler">
-
-                        <form method="post" class="input-container">
-                            {% csrf_token %}
-
-                            <button style="margin:0 auto;" type="submit">Executar</button>
-
-                            <div id="editora" class="editora">desc_stats = df[['pH', 'Volume (ml)']].describe()
-print(desc_stats)</div>
-
-                        </form>
-
-                        <div class="output-container">
-                            <pre id="output">
-                                
-                            </pre>
-                        </div>
-
+                        <h2>Média <br><br>
+                            O conceito de média pode ser definido como a soma de valores de conjuntos de dados e a divisão desse resultado pela quantidade dos elementos desse conjunto.<br>
+                            <br>
+                            Esse tipo de medida torna-se interessante de acordo com o nível de distribuição dos dados, sendo melhor utilizada quando eles estão mais dispersos.<br>
+                            <br>
+                            Fórmula:
+                            <br>
+                        </h2>
+                        <img class="media-img" src="{% static "data_academy/imgs/media.png" %}" alt="media.png">
                     </div>
                 </div>
 
+                <div class="slide" id="slide8">
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Revisão de Conceitos</h2>
+
+                    <div class="box-style">
+                        <h2>Mediana <br>
+                            <br>
+                            O conceito de mediana é dado pelo valor central em meio a um conjunto de dados. Para a sua obtenção é necessário que os valores fornecidos sejam colocados em ordem crescente ou decrescente.<br>
+                            <br>
+                            Uma situação que pode deixar dúvida é: e quando a quantidade de valores fornecidos é par?<br>
+                            <br>
+                            Então, é só tirar a média dos dois valores centrais .<br>
+                            <br>
+                            Exemplo: Os jogadores de um time de futebol tem idades entre 28, 24, 35, 19, e 21 anos.
+                            <br><br>
+                            Calcule o valor da mediana:
+                            <br>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide9">
+                    <h2 style="margin:0 auto; font-weight: bold; margin-bottom:2rem;">Revisão de Conceitos</h2>
+
+                    <div class="box-style">
+                        <h2>Moda 
+                            <br>
+                            <br>
+                            É dada pelo conceito de valor mais frequente dentre os valores dados, para a sua obtenção é necessário observar apenas a frequência dos valores.
+                            <br><br>
+                            Exemplo: Calcule a moda {2,3,3,4,4,4,5,5,6}
+                            <br>
+                        </h2>
+                    </div>
+                </div>
             </div>
 
             <div class="flex-row">
