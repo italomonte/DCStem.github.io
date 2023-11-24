@@ -135,3 +135,36 @@
     font-size: 22px;
 
 }
+
+.table-div{
+    width:100%;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 900px){
+    .grid-content{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .select-content-box{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .select-content-box a{
+        width: 100%;
+    }
+
+    .title-content{
+        padding-left: 0;
+    }
+
+    .table-div{
+        width: 100%; box-sizing: border-box;
+        overflow-x: auto;
+    }
+}
+

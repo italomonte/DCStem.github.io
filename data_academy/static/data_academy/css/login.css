@@ -1,0 +1,93 @@
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.Logo-Projeto {
+    width: 100%; 
+    color: white;
+    background-color: #2874ed;
+    text-align: center;
+    border-radius: 25px;
+    top:0px;
+    font-family: var(--font-headings);
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.Login {
+    font-family: var(--font-headings);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#2b0aa1;
+}
+
+
+.botao-login {
+    background-color: #09ba73;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    border:none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.E-mail,
+.senha {
+    position: relative;
+    width: 200px;
+    margin: 10px 0;
+    color:grey;
+}
+
+.input {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    outline: 0;
+}
+
+.E-mail label,
+.senha label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.E-mail .input:focus ~ label,
+.senha .input:focus ~ label,
+.E-mail .input:not(:placeholder-shown) ~ label,
+.senha .input:not(:placeholder-shown) ~ label {
+    transform: translateY(-20px);
+    font-size: 12px;
+}
+
+    
+.link-cadastro h1{
+    color:black;
+    font-size: 2rem;
+}
