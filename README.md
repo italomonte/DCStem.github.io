@@ -4,7 +4,7 @@
 
 O Data Academy é uma plataforma educacional que utiliza Python como ferramenta principal para o ensino de estatística aplicada. Com ênfase na Aprendizagem Baseada em Problemas (ABP), o site proporciona aos usuários a oportunidade de aprender estatística de uma maneira prática, aplicando conceitos a problemas do mundo real. Para que os alunos se sintam inseridos em suas profissões.
 
-## 💻 Tecnologias
+## 💻 Tecnologias Usadas
 
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
